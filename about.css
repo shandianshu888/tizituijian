@@ -1,0 +1,543 @@
+/* ============================================================
+   关于我们独立导航专页专属样式 (About Page Styling)
+   ============================================================ */
+
+/* 1. 顶部 Hero 全景封面 */
+.about-hero {
+  padding-top: 80px;
+  padding-bottom: 70px;
+  position: relative;
+  background: radial-gradient(circle at 82% 25%, rgba(38, 165, 228, 0.12) 0%, rgba(242, 240, 235, 0) 55%), #f2f0eb;
+  border-bottom: 1.5px solid #dedad0;
+}
+.about-hero-copy {
+  max-width: 860px;
+}
+.about-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font: 700 11.5px 'DM Mono', monospace;
+  color: #0f4b6e;
+  background: rgba(38, 165, 228, 0.15);
+  border: 1px solid rgba(38, 165, 228, 0.35);
+  padding: 5px 14px;
+  border-radius: 20px;
+  margin-bottom: 24px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.about-hero h1 {
+  font: 900 clamp(42px, 6vw, 76px)/1.08 'Noto Serif SC', serif;
+  letter-spacing: -0.06em;
+  color: #0f1923;
+  margin: 0 0 24px;
+}
+.about-hero h1 em {
+  font-style: normal;
+  color: #1a78aa;
+  position: relative;
+}
+.about-hero h1 em::after {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: rgba(240, 154, 84, 0.35);
+  z-index: -1;
+  transform: skewX(-12deg);
+}
+.about-hero-desc {
+  font-size: clamp(16px, 1.8vw, 18.5px);
+  line-height: 1.85;
+  color: #4b5e6d;
+  margin: 0 0 34px;
+  max-width: 780px;
+}
+.about-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 50px;
+}
+.about-hero-btn-tg {
+  background: linear-gradient(135deg, #26a5e4 0%, #1682bf 100%);
+  color: #ffffff !important;
+  text-decoration: none;
+  font: 800 15px 'Manrope', 'DM Mono', sans-serif;
+  padding: 14px 26px;
+  border-radius: 9px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 8px 24px rgba(38, 165, 228, 0.35);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.about-hero-btn-tg:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(38, 165, 228, 0.5);
+  background: linear-gradient(135deg, #32b5f7 0%, #1a8ccf 100%);
+}
+.about-hero-btn-sub {
+  background: #ffffff;
+  color: #0f1923 !important;
+  border: 1.5px solid #d5d1c5;
+  text-decoration: none;
+  font: 700 14px 'DM Mono', monospace;
+  padding: 13px 22px;
+  border-radius: 9px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+.about-hero-btn-sub:hover {
+  border-color: #0f1923;
+  transform: translateY(-2px);
+}
+
+/* 指标看板 */
+.about-metrics-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: 20px;
+}
+.about-metric-card {
+  background: #ffffff;
+  border: 1.5px solid #dfdbcf;
+  border-radius: 12px;
+  padding: 22px 24px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+}
+.about-metric-val {
+  font: 900 34px 'Noto Serif SC', 'DM Mono', serif;
+  color: #1a78aa;
+  letter-spacing: -0.04em;
+  display: block;
+  margin-bottom: 6px;
+}
+.about-metric-label {
+  font: 700 12.5px 'DM Mono', monospace;
+  color: #556677;
+  letter-spacing: 0.04em;
+}
+
+/* 2. 章节通用排版 */
+.about-section {
+  padding-top: 85px;
+  padding-bottom: 90px;
+  border-bottom: 1px solid #dedad0;
+}
+.about-section.alt-bg {
+  background: #edeae2;
+}
+.section-header-wrap {
+  margin-bottom: 46px;
+}
+.section-kicker {
+  font: 700 11px 'DM Mono', monospace;
+  letter-spacing: 0.16em;
+  color: #708494;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.section-title {
+  font: 800 clamp(28px, 3.6vw, 42px) 'Noto Serif SC', serif;
+  letter-spacing: -0.05em;
+  color: #0f1923;
+  margin: 0 0 12px;
+}
+.section-subtitle {
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: #556675;
+  max-width: 680px;
+  margin: 0;
+}
+
+/* 3. 建站初衷两列对比/故事 */
+.story-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+.story-copy p {
+  font-size: 15.5px;
+  line-height: 1.9;
+  color: #3b4e5f;
+  margin: 0 0 20px;
+}
+.story-copy p strong {
+  color: #0f1923;
+  font-weight: 800;
+}
+.story-card-box {
+  background: #ffffff;
+  border: 1.5px solid #dcd7ca;
+  border-radius: 14px;
+  padding: 34px 36px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.04);
+}
+.story-card-box h3 {
+  font: 800 22px 'Noto Serif SC', serif;
+  margin: 0 0 18px;
+  color: #0f1923;
+}
+.story-item {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+.story-item:last-child {
+  margin-bottom: 0;
+}
+.story-item-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  background: #f1f5f9;
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+.story-item-text h4 {
+  font: 700 15px 'Manrope', 'Noto Serif SC', sans-serif;
+  margin: 0 0 5px;
+  color: #101923;
+}
+.story-item-text p {
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: #5c6f80;
+  margin: 0;
+}
+
+/* 4. 四大测评铁律网格 */
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.principle-card {
+  background: #ffffff;
+  border: 1.5px solid #ded9cd;
+  border-radius: 14px;
+  padding: 34px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+}
+.principle-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: var(--p-accent, #26a5e4);
+}
+.principle-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(16, 25, 35, 0.08);
+  border-color: #c9bfaf;
+}
+.principle-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.principle-num {
+  font: 800 13px 'DM Mono', monospace;
+  color: #d16f3e;
+  letter-spacing: 0.1em;
+}
+.principle-tag {
+  font: 700 11.5px 'DM Mono', monospace;
+  padding: 3px 9px;
+  border-radius: 4px;
+  background: #edf2f7;
+  color: #3b5266;
+}
+.principle-title {
+  font: 800 24px 'Noto Serif SC', serif;
+  margin: 0 0 14px;
+  color: #0f1923;
+  letter-spacing: -0.04em;
+}
+.principle-desc {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #556778;
+  margin: 0 0 18px;
+}
+.principle-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid #f0ecdf;
+  padding-top: 14px;
+}
+.principle-checklist li {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #3b5062;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+.principle-checklist li::before {
+  content: "✔";
+  color: #16a34a;
+  font-weight: 800;
+  font-size: 12px;
+}
+
+/* 5. 官方 Telegram 独立特色全景专区 */
+.about-tg-feature-box {
+  background: radial-gradient(circle at 85% 20%, #153e56 0%, #0d2538 45%, #081622 100%);
+  border: 1.5px solid rgba(38, 165, 228, 0.4);
+  border-radius: 18px;
+  padding: 48px;
+  color: #ffffff;
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 40px;
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+.about-tg-feature-box::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 260px;
+  height: 260px;
+  background: rgba(38, 165, 228, 0.18);
+  border-radius: 50%;
+  filter: blur(60px);
+  pointer-events: none;
+}
+.tg-feature-info h3 {
+  font: 800 clamp(26px, 3.2vw, 36px) 'Noto Serif SC', serif;
+  margin: 0 0 14px;
+  color: #ffffff;
+  letter-spacing: -0.04em;
+}
+.tg-feature-info h3 em {
+  font-style: normal;
+  color: #38bdf8;
+}
+.tg-feature-info p {
+  font-size: 15px;
+  line-height: 1.85;
+  color: #a4c4d5;
+  margin: 0 0 26px;
+  max-width: 580px;
+}
+.tg-perks-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+.tg-perk-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.tg-perk-icon {
+  color: #38bdf8;
+  font-size: 16px;
+  line-height: 1;
+  margin-top: 3px;
+}
+.tg-perk-item-text strong {
+  display: block;
+  font-size: 14px;
+  color: #ffffff;
+  margin-bottom: 2px;
+}
+.tg-perk-item-text span {
+  font-size: 12.5px;
+  color: #8da9ba;
+  line-height: 1.5;
+}
+.tg-feature-panel {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+}
+.tg-link-showcase {
+  margin-bottom: 22px;
+  text-align: center;
+}
+.tg-link-showcase small {
+  font: 700 11px 'DM Mono', monospace;
+  color: #8da9ba;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 8px;
+}
+.tg-link-showcase .big-tg-url {
+  font: 800 clamp(20px, 2.5vw, 25px) 'DM Mono', monospace;
+  color: #38bdf8;
+  word-break: break-all;
+}
+.btn-tg-primary {
+  background: #26a5e4;
+  color: #ffffff !important;
+  text-decoration: none;
+  font: 800 16px 'Manrope', 'Noto Serif SC', sans-serif;
+  padding: 15px 26px;
+  border-radius: 9px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 8px 24px rgba(38, 165, 228, 0.45);
+  transition: all 0.25s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+.btn-tg-primary:hover {
+  background: #38bdf8;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(38, 165, 228, 0.6);
+}
+.tg-panel-note {
+  font-size: 12px;
+  line-height: 1.6;
+  color: #839faf;
+  text-align: center;
+  margin: 16px 0 0;
+}
+
+/* 6. 测速实验室环境与拓扑 */
+.lab-specs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+.lab-spec-card {
+  background: #ffffff;
+  border: 1.5px solid #ded9cd;
+  border-radius: 12px;
+  padding: 26px 28px;
+}
+.lab-spec-card h4 {
+  font: 800 18px 'Noto Serif SC', serif;
+  margin: 0 0 10px;
+  color: #0f1923;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.lab-spec-card p {
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: #556778;
+  margin: 0;
+}
+
+/* 7. 商业伦理与免责披露 */
+.ethics-box {
+  background: #ffffff;
+  border-left: 5px solid #f09a54;
+  border: 1.5px solid #ded9cd;
+  border-left-width: 5px;
+  border-radius: 12px;
+  padding: 34px 38px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.03);
+}
+.ethics-box h3 {
+  font: 800 22px 'Noto Serif SC', serif;
+  margin: 0 0 14px;
+  color: #0f1923;
+}
+.ethics-box p {
+  font-size: 14.5px;
+  line-height: 1.85;
+  color: #4b5e6e;
+  margin: 0 0 16px;
+}
+.ethics-box p:last-child {
+  margin-bottom: 0;
+}
+
+/* 8. 快速导航跨页连接 */
+.quick-nav-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 36px;
+}
+.nav-pill {
+  background: #ffffff;
+  border: 1.5px solid #dfdcd2;
+  color: #101923;
+  text-decoration: none;
+  font: 700 13px 'DM Mono', monospace;
+  padding: 10px 18px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.nav-pill:hover {
+  background: #101923;
+  color: #ffffff;
+  border-color: #101923;
+  transform: translateY(-2px);
+}
+
+/* 响应式断点 */
+@media(max-width: 980px) {
+  .about-metrics-bar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .story-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .principles-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-tg-feature-box {
+    grid-template-columns: 1fr;
+    padding: 36px 30px;
+    gap: 30px;
+  }
+  .lab-specs-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media(max-width: 640px) {
+  .about-hero {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .about-metrics-bar {
+    grid-template-columns: 1fr;
+  }
+  .tg-perks-list {
+    grid-template-columns: 1fr;
+  }
+  .about-tg-feature-box {
+    padding: 26px 20px;
+  }
+}

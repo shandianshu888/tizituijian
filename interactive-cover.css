@@ -1,0 +1,281 @@
+/* ============================================================
+   全新人文雅致暖纸风首屏 (Warm Editorial & Humanist Ladder Hero)
+   彻底告别 AI 模板感与荧光粒子，回归高端杂志排版与建筑几何美学
+   ============================================================ */
+
+.hero {
+  min-height: 680px;
+  height: calc(100vh - 78px);
+  max-height: 840px;
+  background: 
+    radial-gradient(circle at 82% 28%, rgba(224, 126, 68, 0.12) 0%, rgba(244, 241, 234, 0) 55%),
+    radial-gradient(circle at 18% 75%, rgba(157, 233, 224, 0.15) 0%, rgba(244, 241, 234, 0) 45%),
+    #f4f1ea !important;
+  color: #0f1923 !important;
+  border-bottom: 1.5px solid #ded8cb;
+  cursor: default !important;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 消除所有荧光 AI 网格覆盖层 */
+.hero:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.045 !important;
+  background-image: 
+    linear-gradient(#0f1923 1px, transparent 1px),
+    linear-gradient(90deg, #0f1923 1px, transparent 1px) !important;
+  background-size: 40px 40px !important;
+  pointer-events: none;
+}
+
+/* 隐藏有 AI 模板感的粒子画布与科幻雷达圈 */
+#network-canvas {
+  display: none !important;
+}
+.hero-art {
+  display: none !important;
+}
+
+/* 移除底部伪造的科幻提示框 */
+.hero:before {
+  display: none !important;
+}
+
+/* 文案与排版：经典深墨色与暖陶土色 */
+.hero-copy {
+  z-index: 2;
+  position: relative;
+  max-width: 620px;
+}
+
+.eyebrow {
+  font: 700 11px/1 'DM Mono', monospace !important;
+  letter-spacing: .16em !important;
+  color: #c95e34 !important;
+  text-transform: uppercase !important;
+  margin-bottom: 18px !important;
+}
+.eyebrow span {
+  color: #101923 !important;
+  margin-right: 14px !important;
+  background: #e6e0d3;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.hero h1 {
+  font: 900 clamp(48px, 6.8vw, 92px)/1.02 'Noto Serif SC', serif !important;
+  letter-spacing: -.07em !important;
+  color: #0d1722 !important;
+  margin: 22px 0 24px !important;
+  text-shadow: none !important;
+}
+
+.hero h1:before {
+  content: '🪜 翻墙梯子推荐 · 真实测速与避坑向导' !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  font: 700 12px/1 'DM Mono', monospace !important;
+  letter-spacing: .12em !important;
+  color: #0f1923 !important;
+  margin-bottom: 20px !important;
+  padding: 6px 12px !important;
+  background: #e8e3d6 !important;
+  border: 1px solid #d5cec0 !important;
+  border-radius: 6px !important;
+  box-shadow: none !important;
+}
+
+.hero h1 em {
+  font-style: normal !important;
+  color: #c95e34 !important;
+  position: relative !important;
+  text-shadow: none !important;
+}
+
+.hero h1 em:after {
+  content: "" !important;
+  position: absolute !important;
+  bottom: 2px !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 8px !important;
+  background: rgba(201, 94, 52, 0.22) !important;
+  z-index: -1 !important;
+  transform: skewX(-14deg) !important;
+}
+
+.hero-intro {
+  color: #495c6b !important;
+  font-size: 16px !important;
+  line-height: 1.85 !important;
+  max-width: 480px !important;
+  text-shadow: none !important;
+}
+
+/* 按钮设计：沉稳厚重的墨黑与纸张暖灰 */
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-top: 36px;
+}
+
+.button-primary {
+  background: #101923 !important;
+  color: #ffffff !important;
+  padding: 13px 24px !important;
+  border-radius: 8px !important;
+  font-weight: 700 !important;
+  font-size: 13.5px !important;
+  letter-spacing: 0.02em !important;
+  box-shadow: 0 4px 14px rgba(16, 25, 35, 0.18) !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+.button-primary:hover {
+  background: #c95e34 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 22px rgba(201, 94, 52, 0.32) !important;
+}
+
+.text-link {
+  color: #0f1923 !important;
+  font: 700 13px 'DM Mono', monospace !important;
+  text-decoration: none !important;
+  border-bottom: 1.5px solid #0f1923 !important;
+  padding-bottom: 3px !important;
+  transition: all 0.2s ease !important;
+}
+.text-link:hover {
+  color: #c95e34 !important;
+  border-color: #c95e34 !important;
+}
+
+/* 右侧：纯手工排版的梯级天梯建筑展板（非 AI 生图，100% 现代人文设计） */
+.hero-ladder-panel {
+  position: absolute;
+  right: clamp(24px, 7vw, 116px);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 360px;
+  background: #ffffff;
+  border: 1.5px solid #ded8cb;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 16px 40px rgba(16, 25, 35, 0.08);
+  z-index: 2;
+}
+
+.ladder-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #ede8dc;
+}
+.ladder-panel-title {
+  font: 800 14px 'Noto Serif SC', serif;
+  color: #0f1923;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.ladder-panel-tag {
+  font: 700 11px 'DM Mono', monospace;
+  color: #c95e34;
+  background: rgba(201, 94, 52, 0.1);
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.ladder-steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.ladder-step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 12px 14px;
+  background: #fbf9f4;
+  border: 1px solid #eae5d8;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+.ladder-step-item:hover {
+  background: #ffffff;
+  border-color: #c95e34;
+  transform: translateX(-4px);
+}
+.ladder-step-level {
+  font: 800 12px 'DM Mono', monospace;
+  color: #ffffff;
+  background: #101923;
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+.ladder-step-item:first-child .ladder-step-level {
+  background: #c95e34;
+}
+.ladder-step-content strong {
+  display: block;
+  font: 700 13.5px 'Manrope', 'Noto Serif SC', sans-serif;
+  color: #0f1923;
+  margin-bottom: 2px;
+}
+.ladder-step-content span {
+  font-size: 11.5px;
+  color: #647585;
+  line-height: 1.5;
+  display: block;
+}
+
+.ladder-panel-foot {
+  margin-top: 20px;
+  padding-top: 14px;
+  border-top: 1px dashed #ded8cb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font: 700 11.5px 'DM Mono', monospace;
+  color: #647585;
+}
+.ladder-status-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background: #16a34a;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #16a34a;
+  margin-right: 6px;
+}
+
+/* 响应式断点 */
+@media(max-width: 980px) {
+  .hero-ladder-panel {
+    display: none;
+  }
+}
+@media(max-width: 800px) {
+  .hero {
+    min-height: 580px;
+    height: auto;
+    padding-top: 60px;
+    padding-bottom: 70px;
+  }
+  .hero-copy {
+    max-width: 100%;
+  }
+}

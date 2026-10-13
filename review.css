@@ -1,0 +1,1414 @@
+/* ============================================================
+   机场独立深度实测专页专属样式 (Airport Independent Benchmark Review)
+   ============================================================ */
+
+/* 1. 顶部返回导航栏 */
+.review-top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  background: rgba(16, 25, 35, 0.96);
+  backdrop-filter: blur(12px);
+  border-bottom: 1.5px solid #233940;
+  padding: 12px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.review-nav-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.review-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font: 700 12px 'DM Mono', monospace;
+  color: #9de9e0;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 2px;
+  border: 1px solid rgba(157, 233, 224, 0.3);
+  background: rgba(157, 233, 224, 0.06);
+  transition: all .2s ease;
+}
+
+.review-back-link:hover {
+  background: rgba(157, 233, 224, 0.15);
+  border-color: #9de9e0;
+  color: #ffffff;
+  transform: translateX(-2px);
+}
+
+.review-breadcrumb {
+  font: 500 12px 'Manrope', sans-serif;
+  color: #7b9499;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.review-breadcrumb a {
+  color: #b8ccca;
+  text-decoration: none;
+}
+
+.review-breadcrumb a:hover {
+  color: #9de9e0;
+}
+
+.review-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.review-airport-selector {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font: 600 12px 'Manrope', sans-serif;
+  color: #b8ccca;
+}
+
+.review-airport-selector select {
+  background: #0d161f;
+  color: #f09a54;
+  border: 1.5px solid #3d585f;
+  padding: 6px 12px;
+  border-radius: 2px;
+  font: 700 12px 'DM Mono', 'Noto Serif SC', serif;
+  cursor: pointer;
+  outline: none;
+  transition: all .2s ease;
+}
+
+.review-airport-selector select:hover,
+.review-airport-selector select:focus {
+  border-color: #f09a54;
+  box-shadow: 0 0 10px rgba(240, 154, 84, 0.25);
+}
+
+/* 2. 评测专页 Hero 头部 */
+.review-hero {
+  background: radial-gradient(circle at 85% 20%, rgba(240, 154, 84, 0.14) 0%, rgba(244, 241, 234, 0) 60%), #f4f1ea;
+  border-bottom: 2px solid #dcdecb;
+  padding: 48px 0 38px;
+  position: relative;
+}
+
+.review-hero-container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.review-hero-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.review-hero-main {
+  flex: 1;
+  min-width: 320px;
+}
+
+.review-hero-badge-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.rh-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font: 700 11px 'DM Mono', monospace;
+  padding: 4px 10px;
+  border-radius: 2px;
+  letter-spacing: .06em;
+}
+
+.rh-badge.tier-top {
+  background: #f09a54;
+  color: #101923;
+  font-weight: 800;
+  box-shadow: 2px 2px 0 #080f14;
+}
+
+.rh-badge.tier-normal {
+  background: #101923;
+  color: #9de9e0;
+  border: 1px solid #3c565c;
+}
+
+.rh-badge.live-tag {
+  background: rgba(38, 165, 228, 0.15);
+  color: #0f4b6e;
+  border: 1px solid rgba(38, 165, 228, 0.35);
+}
+
+.review-hero h1 {
+  font: 900 clamp(32px, 5vw, 56px)/1.15 'Noto Serif SC', serif;
+  color: #101923;
+  margin: 0 0 12px;
+  letter-spacing: -0.04em;
+}
+
+.review-hero h1 em {
+  font-style: normal;
+  color: #b85210;
+}
+
+.review-hero-tagline {
+  font: 600 16px/1.6 'Manrope', 'Noto Serif SC', serif;
+  color: #3b5055;
+  margin: 0 0 20px;
+  max-width: 760px;
+}
+
+.review-hero-meta-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 18px;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid #dcdecb;
+  border-radius: 2px;
+  margin-top: 14px;
+}
+
+.meta-strip-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font: 600 12.5px 'Manrope', sans-serif;
+  color: #2a4047;
+}
+
+.meta-strip-item strong {
+  color: #101923;
+  font-family: 'DM Mono', monospace;
+}
+
+/* Hero 右侧评分大看板 */
+.review-hero-scorecard {
+  background: #101923;
+  color: #ffffff;
+  padding: 24px 28px;
+  border-radius: 3px;
+  border: 1.5px solid #233940;
+  box-shadow: 0 16px 36px rgba(7, 18, 31, 0.28);
+  min-width: 250px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.review-hero-scorecard::before {
+  content: "BENCHMARK SCORE";
+  display: block;
+  font: 800 10px 'DM Mono', monospace;
+  color: #f09a54;
+  letter-spacing: .14em;
+  margin-bottom: 6px;
+}
+
+.scorecard-big-num {
+  font: 900 64px/1 'DM Mono', monospace;
+  color: #9de9e0;
+  text-shadow: 0 0 25px rgba(157, 233, 224, 0.4);
+  margin: 4px 0;
+}
+
+.scorecard-stars {
+  font-size: 18px;
+  letter-spacing: 3px;
+  color: #f4d17b;
+  margin-bottom: 8px;
+}
+
+.scorecard-label {
+  font: 600 12px 'Manrope', sans-serif;
+  color: #8da4a8;
+}
+
+.scorecard-cta {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.scorecard-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #f09a54 0%, #e07e32 100%);
+  color: #101923;
+  font: 800 13px 'Manrope', sans-serif;
+  padding: 10px 18px;
+  border-radius: 2px;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(240, 154, 84, 0.35);
+  transition: all .2s ease;
+}
+
+.scorecard-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(240, 154, 84, 0.5);
+  background: #f7a665;
+}
+
+.scorecard-coupon-pill {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px dashed #f09a54;
+  padding: 6px 10px;
+  border-radius: 2px;
+  font: 600 11px 'DM Mono', monospace;
+  color: #f09a54;
+  cursor: pointer;
+  transition: all .15s ease;
+}
+
+.scorecard-coupon-pill:hover {
+  background: rgba(240, 154, 84, 0.15);
+}
+
+/* 3. 核心测速指标四联看板 (Top 4 Metrics Grid) */
+.review-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.kpi-card {
+  background: #ffffff;
+  border: 1.5px solid #dcdecb;
+  border-top: 3.5px solid #1a78aa;
+  padding: 18px 20px;
+  border-radius: 2px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.kpi-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.kpi-card.kpi-accent {
+  border-top-color: #f09a54;
+}
+
+.kpi-card.kpi-success {
+  border-top-color: #2e8b57;
+}
+
+.kpi-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font: 700 11px 'DM Mono', monospace;
+  color: #5d7579;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.kpi-val {
+  font: 800 22px/1.2 'DM Mono', 'Manrope', monospace;
+  color: #101923;
+  margin-bottom: 4px;
+}
+
+.kpi-desc {
+  font: 500 11.5px/1.4 'Manrope', sans-serif;
+  color: #6d8287;
+}
+
+/* 4. 评测主体内容区布局 */
+.review-main-body {
+  max-width: 1180px;
+  margin: 40px auto 60px;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 36px;
+}
+
+.review-content-col {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+/* 模块通用样式 */
+.review-section-box {
+  background: #ffffff;
+  border: 1px solid #dcdecb;
+  border-radius: 3px;
+  padding: 28px 30px;
+  box-shadow: 0 8px 22px rgba(16, 25, 35, 0.03);
+}
+
+.review-section-header {
+  border-bottom: 1.5px solid #eceae2;
+  padding-bottom: 14px;
+  margin-bottom: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.review-section-header h2 {
+  font: 800 20px 'Noto Serif SC', 'Manrope', serif;
+  color: #101923;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-tag-kicker {
+  font: 700 10.5px 'DM Mono', monospace;
+  color: #1a78aa;
+  letter-spacing: .1em;
+}
+
+/* 模块 1: 运营档案 & 营业时间专用网格 */
+.ops-archive-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.ops-card {
+  background: #faf8f3;
+  border: 1px solid #e5e3d7;
+  padding: 18px 20px;
+  border-radius: 2px;
+  position: relative;
+}
+
+.ops-card.highlight-ops {
+  background: linear-gradient(135deg, rgba(240, 154, 84, 0.08) 0%, rgba(250, 248, 243, 1) 100%);
+  border-left: 3.5px solid #f09a54;
+}
+
+.ops-card h3 {
+  font: 700 13px 'Manrope', sans-serif;
+  color: #101923;
+  margin: 0 0 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ops-card p {
+  font: 500 13px/1.65 'Manrope', 'Noto Serif SC', serif;
+  color: #435b61;
+  margin: 0;
+}
+
+.ops-card p strong {
+  color: #101923;
+  font-weight: 700;
+}
+
+/* 模块 2: 全球分地区测速实测数据表 */
+.benchmark-table-wrap {
+  overflow-x: auto;
+  border: 1px solid #dcdecb;
+  border-radius: 2px;
+}
+
+.benchmark-table {
+  width: 100%;
+  border-collapse: collapse;
+  font: 13px 'Manrope', sans-serif;
+  text-align: left;
+}
+
+.benchmark-table th {
+  background: #101923;
+  color: #9de9e0;
+  font: 700 11px 'DM Mono', monospace;
+  letter-spacing: .08em;
+  padding: 12px 16px;
+  border-bottom: 1.5px solid #233940;
+}
+
+.benchmark-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #eceae2;
+  color: #273e44;
+}
+
+.benchmark-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.benchmark-table tr:hover td {
+  background: #faf8f2;
+}
+
+.node-region-cell {
+  font-weight: 700;
+  color: #101923;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.speed-bar-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.speed-bar {
+  height: 6px;
+  background: #e0ded4;
+  border-radius: 3px;
+  flex: 1;
+  max-width: 100px;
+  overflow: hidden;
+}
+
+.speed-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #1a78aa, #26a5e4);
+  border-radius: 3px;
+}
+
+.speed-bar-fill.fill-orange {
+  background: linear-gradient(90deg, #e07e32, #f09a54);
+}
+
+.badge-tag-pass {
+  display: inline-block;
+  padding: 2px 8px;
+  background: rgba(46, 139, 87, 0.12);
+  color: #1d7340;
+  border: 1px solid rgba(46, 139, 87, 0.3);
+  border-radius: 2px;
+  font: 700 11px 'DM Mono', monospace;
+}
+
+/* 模块 3: 流媒体 & AI 解锁矩阵 */
+.unlock-matrix-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.unlock-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #faf8f3;
+  border: 1px solid #e5e3d7;
+  padding: 12px 16px;
+  border-radius: 2px;
+}
+
+.unlock-name {
+  font: 700 13px 'Manrope', sans-serif;
+  color: #1b3238;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.unlock-status {
+  font: 700 11.5px 'DM Mono', monospace;
+  padding: 3px 8px;
+  border-radius: 2px;
+}
+
+.unlock-status.status-pass {
+  background: rgba(46, 139, 87, 0.15);
+  color: #156b38;
+  border: 1px solid rgba(46, 139, 87, 0.35);
+}
+
+.unlock-status.status-warn {
+  background: rgba(240, 154, 84, 0.15);
+  color: #b85210;
+  border: 1px solid rgba(240, 154, 84, 0.35);
+}
+
+/* 模块 4: 套餐价格阶梯表 */
+.pricing-tier-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.pricing-tier-table th {
+  background: #f4f1ea;
+  color: #4b646a;
+  font: 700 11px 'DM Mono', monospace;
+  padding: 10px 14px;
+  text-align: left;
+  border-bottom: 1.5px solid #dcdecb;
+}
+
+.pricing-tier-table td {
+  padding: 14px;
+  border-bottom: 1px solid #eeebe2;
+  font: 13px 'Manrope', sans-serif;
+  color: #273e44;
+}
+
+.pricing-tier-table td.price-col {
+  font: 800 17px 'DM Mono', monospace;
+  color: #b85210;
+}
+
+/* 模块 5: 优缺点对比 */
+.review-pros-cons-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.pros-box, .cons-box {
+  padding: 20px;
+  border-radius: 2px;
+}
+
+.pros-box {
+  background: #f2f8f4;
+  border: 1.5px solid #cce5d5;
+}
+
+.pros-box h3 {
+  font: 800 14px 'Manrope', sans-serif;
+  color: #156b38;
+  margin: 0 0 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cons-box {
+  background: #faf4f1;
+  border: 1.5px solid #ebd9d0;
+}
+
+.cons-box h3 {
+  font: 800 14px 'Manrope', sans-serif;
+  color: #b85210;
+  margin: 0 0 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pros-cons-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pros-cons-list li {
+  position: relative;
+  padding-left: 20px;
+  font: 500 13px/1.6 'Manrope', 'Noto Serif SC', serif;
+  color: #2c4247;
+}
+
+.pros-box .pros-cons-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #156b38;
+  font-weight: 800;
+}
+
+.cons-box .pros-cons-list li::before {
+  content: "✖";
+  position: absolute;
+  left: 0;
+  color: #b85210;
+  font-weight: 800;
+}
+
+/* 模块 6: 编辑部评测结论 */
+.verdict-box {
+  background: #faf8f2;
+  border: 1.5px solid #dcdecb;
+  border-left: 5px solid #1a78aa;
+  padding: 22px 26px;
+  border-radius: 2px;
+}
+
+.verdict-box h3 {
+  font: 800 16px 'Noto Serif SC', serif;
+  color: #101923;
+  margin: 0 0 10px;
+}
+
+.verdict-box p {
+  font: 500 14px/1.75 'Manrope', 'Noto Serif SC', serif;
+  color: #2e464c;
+  margin: 0;
+}
+
+/* 5. 侧边栏辅助工具 (Sidebar Column) */
+.review-sidebar-col {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.review-side-card {
+  background: #ffffff;
+  border: 1px solid #dcdecb;
+  border-radius: 3px;
+  padding: 22px;
+  box-shadow: 0 6px 18px rgba(16, 25, 35, 0.03);
+}
+
+.review-side-card h3 {
+  font: 800 14px 'Manrope', sans-serif;
+  color: #101923;
+  margin: 0 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 1.5px solid #eceae2;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.side-btn-full {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  background: #101923;
+  color: #ffffff;
+  font: 700 13px 'Manrope', sans-serif;
+  padding: 12px;
+  border-radius: 2px;
+  text-decoration: none;
+  border: 1px solid #233940;
+  box-shadow: 0 4px 12px rgba(16, 25, 35, 0.15);
+  transition: all .2s ease;
+  box-sizing: border-box;
+}
+
+.side-btn-full:hover {
+  background: #f09a54;
+  color: #101923;
+  border-color: #f09a54;
+  box-shadow: 0 6px 18px rgba(240, 154, 84, 0.35);
+}
+
+.side-coupon-box {
+  background: #faf8f2;
+  border: 1.5px dashed #f09a54;
+  padding: 14px;
+  border-radius: 2px;
+  margin-top: 14px;
+  text-align: center;
+}
+
+.side-coupon-title {
+  font: 700 11px 'DM Mono', monospace;
+  color: #b85210;
+  margin-bottom: 6px;
+}
+
+.side-coupon-code {
+  font: 900 20px 'DM Mono', monospace;
+  color: #101923;
+  letter-spacing: .08em;
+  background: #ffffff;
+  padding: 6px 12px;
+  border: 1px solid #dcdecb;
+  border-radius: 2px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.side-copy-btn {
+  width: 100%;
+  background: #f09a54;
+  border: 0;
+  color: #101923;
+  padding: 8px;
+  font: 800 12px 'Manrope', sans-serif;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all .15s ease;
+}
+
+.side-copy-btn:hover {
+  background: #f7a665;
+}
+
+.side-copy-btn.copied {
+  background: #2e8b57;
+  color: #ffffff;
+}
+
+/* 24 家机场快速跳转列表导航 */
+.airport-jump-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-height: 480px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.airport-jump-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px 10px;
+  border-radius: 2px;
+  font: 600 12px 'Manrope', sans-serif;
+  color: #3b5055;
+  text-decoration: none;
+  transition: all .15s ease;
+}
+
+.airport-jump-item:hover {
+  background: #faf4ea;
+  color: #b85210;
+  padding-left: 14px;
+}
+
+.airport-jump-item.is-current {
+  background: #101923;
+  color: #f09a54;
+  font-weight: 800;
+}
+
+.airport-jump-item.is-current .jump-score {
+  color: #9de9e0;
+}
+
+.jump-score {
+  font: 700 11px 'DM Mono', monospace;
+  color: #7b9499;
+}
+
+/* 响应式断点适配 */
+@media (max-width: 980px) {
+  .review-kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .review-main-body {
+    grid-template-columns: 1fr;
+  }
+  .review-sidebar-col {
+    order: -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .review-top-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 16px;
+  }
+  .review-kpi-grid {
+    grid-template-columns: 1fr;
+  }
+  .ops-archive-grid {
+    grid-template-columns: 1fr;
+  }
+  .unlock-matrix-grid {
+    grid-template-columns: 1fr;
+  }
+  .review-pros-cons-grid {
+    grid-template-columns: 1fr;
+  }
+  .review-hero h1 {
+    font-size: 28px;
+  }
+}
+
+/* ============================================================
+   时间段多维测速图表专属增强样式 (Multi-Period Speed Benchmark)
+   ============================================================ */
+
+/* 顶部快速选择药丸滑动条 */
+.airport-pills-wrap {
+  background: #0b1218;
+  border-bottom: 1px solid #1e333d;
+  padding: 10px 24px;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: thin;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.airport-pills-label {
+  font: 700 11px 'DM Mono', monospace;
+  color: #7b9499;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  margin-right: 6px;
+  flex-shrink: 0;
+}
+
+.airport-pill-btn {
+  background: #14222e;
+  color: #a2bcc1;
+  border: 1px solid #283e46;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font: 600 12px 'Manrope', sans-serif;
+  cursor: pointer;
+  transition: all .2s ease;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.airport-pill-btn:hover {
+  background: #1f3343;
+  color: #9de9e0;
+  border-color: #3b5f6b;
+  transform: translateY(-1px);
+}
+
+.airport-pill-btn.active {
+  background: linear-gradient(135deg, #f09a54 0%, #e07e32 100%);
+  color: #101923;
+  font-weight: 800;
+  border-color: #f09a54;
+  box-shadow: 0 2px 10px rgba(240, 154, 84, 0.4);
+}
+
+.airport-pill-btn .pill-rank {
+  font: 700 10px 'DM Mono', monospace;
+  opacity: 0.8;
+}
+
+/* 时间段切换器容器 */
+.time-period-selector-wrap {
+  margin-bottom: 22px;
+}
+
+.time-period-intro {
+  font: 500 13px/1.6 'Manrope', 'Noto Serif SC', serif;
+  color: #4b656b;
+  margin: 0 0 14px;
+}
+
+.time-period-tabs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.time-tab-btn {
+  background: #f8f6f0;
+  border: 1.5px solid #dcd9cc;
+  padding: 12px 14px;
+  border-radius: 3px;
+  cursor: pointer;
+  text-align: left;
+  transition: all .2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+  outline: none;
+}
+
+.time-tab-btn:hover {
+  background: #ffffff;
+  border-color: #f09a54;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.time-tab-btn.active {
+  background: #101923;
+  border-color: #f09a54;
+  box-shadow: 0 6px 18px rgba(16, 25, 35, 0.18);
+  transform: translateY(-2px);
+}
+
+.time-tab-btn.active::after {
+  content: "";
+  position: absolute;
+  bottom: -7px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid #101923;
+}
+
+.time-tab-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.time-tab-icon-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font: 800 13px 'Manrope', 'Noto Serif SC', sans-serif;
+  color: #101923;
+}
+
+.time-tab-btn.active .time-tab-icon-title {
+  color: #ffffff;
+}
+
+.time-tab-badge {
+  font: 700 9.5px 'DM Mono', monospace;
+  padding: 2px 6px;
+  border-radius: 2px;
+  background: rgba(26, 120, 170, 0.12);
+  color: #1a78aa;
+}
+
+.time-tab-btn.active .time-tab-badge {
+  background: rgba(240, 154, 84, 0.2);
+  color: #f09a54;
+  border: 1px solid rgba(240, 154, 84, 0.4);
+}
+
+.time-tab-clock {
+  font: 700 11.5px 'DM Mono', monospace;
+  color: #657b80;
+}
+
+.time-tab-btn.active .time-tab-clock {
+  color: #9de9e0;
+}
+
+.time-tab-desc {
+  font: 500 11px 'Manrope', sans-serif;
+  color: #7b9196;
+}
+
+.time-tab-btn.active .time-tab-desc {
+  color: #c2d6da;
+}
+
+/* 测速环境与当前时段看板看板 */
+.period-summary-strip {
+  background: #101923;
+  color: #ffffff;
+  padding: 16px 20px;
+  border-radius: 3px;
+  margin-bottom: 22px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  border-left: 4px solid #f09a54;
+}
+
+.pss-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.pss-label {
+  font: 700 10.5px 'DM Mono', monospace;
+  color: #7f999f;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+
+.pss-val {
+  font: 900 18px 'DM Mono', monospace;
+  color: #9de9e0;
+}
+
+.pss-val.accent-orange {
+  color: #f09a54;
+}
+
+.pss-val.accent-green {
+  color: #4ade80;
+}
+
+.pss-desc {
+  font: 500 11px 'Manrope', sans-serif;
+  color: #a8bec2;
+}
+
+/* 可视化测速曲线图卡片 */
+.speed-curve-card {
+  background: #faf8f2;
+  border: 1px solid #dcd9cc;
+  padding: 18px 20px;
+  border-radius: 3px;
+  margin-bottom: 24px;
+}
+
+.speed-curve-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.speed-curve-title {
+  font: 800 13px 'Manrope', sans-serif;
+  color: #101923;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.speed-curve-legend {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font: 600 11px 'DM Mono', monospace;
+  color: #5d7579;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.legend-dot.cyan { background: #1a78aa; }
+.legend-dot.orange { background: #f09a54; }
+
+.speed-curve-svg-box {
+  width: 100%;
+  height: 160px;
+  background: #ffffff;
+  border: 1px solid #e5e3d7;
+  border-radius: 2px;
+  position: relative;
+}
+
+.speed-curve-svg-box svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* 测速环境元信息条 */
+.speed-test-env-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f2eee3;
+  border: 1px dashed #cfccbc;
+  padding: 8px 14px;
+  border-radius: 2px;
+  margin-top: 14px;
+  font: 500 11.5px 'DM Mono', 'Manrope', monospace;
+  color: #4c6267;
+}
+
+.speed-test-env-bar strong {
+  color: #101923;
+}
+
+/* 侧边栏搜索框 */
+.sidebar-search-wrap {
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.sidebar-search-input {
+  width: 100%;
+  box-sizing: border-box;
+  background: #faf8f2;
+  border: 1.5px solid #dcd9cc;
+  padding: 8px 12px 8px 30px;
+  border-radius: 2px;
+  font: 600 12px 'Manrope', sans-serif;
+  color: #101923;
+  outline: none;
+  transition: all .2s ease;
+}
+
+.sidebar-search-input:focus {
+  border-color: #f09a54;
+  background: #ffffff;
+  box-shadow: 0 0 8px rgba(240, 154, 84, 0.25);
+}
+
+.sidebar-search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: #7b9499;
+  pointer-events: none;
+}
+
+/* Toast 提示浮层 */
+.copy-toast {
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%) translateY(30px);
+  background: #101923;
+  color: #9de9e0;
+  border: 1px solid #233940;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  padding: 10px 22px;
+  border-radius: 4px;
+  font: 700 13px 'Manrope', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all .25s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 9999;
+}
+
+.copy-toast.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .time-period-tabs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .period-summary-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ============================================================
+   运维健康度指标条、底层架构拆解与实时监控增强样式
+   ============================================================ */
+
+/* 1. 运维健康度与服务 SLA 指标看板 */
+.ops-sla-banner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  background: #101923;
+  color: #ffffff;
+  padding: 14px 18px;
+  border-radius: 3px;
+  margin-bottom: 18px;
+  border-left: 4px solid #1a78aa;
+}
+
+.osb-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.osb-label {
+  font: 700 10.5px 'DM Mono', monospace;
+  color: #7f999f;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+
+.osb-val {
+  font: 900 17px 'DM Mono', monospace;
+  color: #9de9e0;
+}
+
+.osb-val.accent-green {
+  color: #4ade80;
+}
+
+.osb-val.accent-orange {
+  color: #f09a54;
+}
+
+.osb-desc {
+  font: 500 11px 'Manrope', sans-serif;
+  color: #a8bec2;
+}
+
+/* 2. Hero 评分卡片实时连通性小徽章 */
+.scorecard-live-status {
+  margin-top: 10px;
+  font: 600 11px 'DM Mono', monospace;
+  color: #4ade80;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: rgba(74, 222, 128, 0.1);
+  padding: 5px 10px;
+  border-radius: 2px;
+  border: 1px solid rgba(74, 222, 128, 0.25);
+}
+
+.live-pulse-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 8px #4ade80;
+  animation: pulseLive 1.8s infinite;
+}
+
+@keyframes pulseLive {
+  0% { transform: scale(0.9); opacity: 0.7; }
+  50% { transform: scale(1.25); opacity: 1; }
+  100% { transform: scale(0.9); opacity: 0.7; }
+}
+
+/* 3. 架构拆解四联卡片 (Architecture Tech Grid) */
+.arch-tech-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin: 18px 0;
+}
+
+.arch-tech-card {
+  background: #faf8f2;
+  border: 1px solid #e0ded4;
+  padding: 16px 18px;
+  border-radius: 2px;
+  position: relative;
+  transition: transform .2s ease, border-color .2s ease;
+}
+
+.arch-tech-card:hover {
+  border-color: #f09a54;
+  transform: translateY(-2px);
+  background: #ffffff;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+}
+
+.arch-tech-badge {
+  font: 700 10.5px 'DM Mono', monospace;
+  color: #1a78aa;
+  margin-bottom: 6px;
+  letter-spacing: .08em;
+  display: inline-block;
+}
+
+.arch-tech-title {
+  font: 800 13.5px 'Manrope', 'Noto Serif SC', sans-serif;
+  color: #101923;
+  margin: 0 0 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.arch-tech-desc {
+  font: 500 12.5px/1.65 'Manrope', 'Noto Serif SC', serif;
+  color: #455e64;
+  margin: 0;
+}
+
+/* 4. 侧边栏机房实时测速与避坑卡片 */
+.side-ping-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.side-ping-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #faf8f3;
+  border: 1px solid #e5e3d7;
+  padding: 8px 12px;
+  border-radius: 2px;
+  font: 600 12px 'Manrope', sans-serif;
+  color: #1b3238;
+}
+
+.side-ping-val {
+  font: 700 11.5px 'DM Mono', monospace;
+  color: #156b38;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.side-tips-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.side-tips-list li {
+  position: relative;
+  padding-left: 16px;
+  font: 500 12px/1.65 'Manrope', 'Noto Serif SC', serif;
+  color: #3b5055;
+}
+
+.side-tips-list li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: #f09a54;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 1;
+}
+
+@media (max-width: 640px) {
+  .ops-sla-banner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .arch-tech-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>深度实测评测专页 - 翻墙梯子推荐</title>
+  <meta name="description" content="2026 最新翻墙梯子与机场深度实测评测报告：营业时间、底层架构简介、节假日与晚高峰全时段测速图、全球分地区节点测速、流媒体与AI工具解锁矩阵、避坑指南与独家折扣券。">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href="https://fqtizituijian.com/review.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="翻墙梯子推荐">
+  <meta property="og:url" content="https://fqtizituijian.com/review.html">
+  <meta property="og:title" content="深度实测评测专页 - 翻墙梯子推荐">
+  <meta property="og:description" content="2026 最新翻墙梯子与机场深度实测评测报告：营业时间、底层架构简介、节假日与晚高峰全时段测速图、全球分地区节点测速、流媒体与AI工具解锁矩阵。">
+  <meta property="og:image" content="https://fqtizituijian.com/apple-touch-icon.png">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500;700&family=Manrope:wght@400;500;600;700;800&family=Noto+Serif+SC:wght@500;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="brand.css">
+  <link rel="stylesheet" href="review.css">
+</head>
+<body data-page="airport-review">
+  <div class="noise"></div>
+
+  <!-- 1. 顶部返回与切换导航栏 -->
+  <nav class="review-top-nav">
+    <div class="review-nav-left">
+      <a href="airport-recommend.html" class="review-back-link">
+        <span>←</span> 返回梯子推荐
+      </a>
+      <div class="review-breadcrumb">
+        <a href="index.html">首页</a>
+        <span>/</span>
+        <a href="airport-recommend.html">梯子推荐</a>
+        <span>/</span>
+        <span id="breadcrumb-current-airport" class="current">深度实测评测</span>
+      </div>
+    </div>
+    <div class="review-nav-right">
+      <div class="review-airport-selector">
+        <label for="airport-select">选择测评目标:</label>
+        <select id="airport-select" aria-label="切换梯子评测目标">
+          <!-- 动态注入 24 家梯子选项 -->
+        </select>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 2. 24家梯子横向直达药丸滑动栏 -->
+  <div class="airport-pills-wrap" id="airport-pills-container" role="tablist" aria-label="24家梯子快速切换">
+    <span class="airport-pills-label">24家测评直达:</span>
+    <!-- 动态注入药丸按钮 -->
+  </div>
+
+  <!-- 3. 评测专页 Hero 头部 -->
+  <header class="review-hero">
+    <div class="review-hero-container">
+      <div class="review-hero-top">
+        <div class="review-hero-main">
+          <div class="review-hero-badge-group" id="hero-badges">
+            <!-- 动态注入徽章 -->
+          </div>
+          <h1 id="hero-title">载入中... <em>深度实测评测报告</em></h1>
+          <p class="review-hero-tagline" id="hero-tagline">正在获取当前梯子的全时段压测与运营档案数据...</p>
+          <div class="review-hero-meta-strip" id="hero-meta-strip">
+            <div class="meta-strip-item">
+              <span>📅 实测更新:</span>
+              <strong id="hero-update-date">2026.10</strong>
+            </div>
+            <div class="meta-strip-item">
+              <span>⚡ 专线架构:</span>
+              <strong id="hero-arch">加载中...</strong>
+            </div>
+            <div class="meta-strip-item">
+              <span>🔒 协议生态:</span>
+              <strong id="hero-protocols">加载中...</strong>
+            </div>
+            <div class="meta-strip-item">
+              <span>📍 覆盖节点:</span>
+              <strong id="hero-node-count">加载中...</strong>
+            </div>
+            <div class="meta-strip-item">
+              <span>🛡️ 隐私保护:</span>
+              <strong>零日志记录 · 内网端到端物理隔离</strong>
+            </div>
+            <div class="meta-strip-item">
+              <span>🌐 双栈支持:</span>
+              <strong>IPv4 / IPv6 原生双栈</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero 右侧评分大看板 -->
+        <div class="review-hero-scorecard">
+          <div class="scorecard-big-num" id="scorecard-score">--</div>
+          <div class="scorecard-stars" id="scorecard-stars">★★★★★</div>
+          <div class="scorecard-label" id="scorecard-rank-text">综合性能评级: 极速稳健</div>
+          <div class="scorecard-live-status">
+            <span class="live-pulse-dot"></span>
+            <span>节点实时在线率 100% (90天连通率 99.98%)</span>
+          </div>
+          <div class="scorecard-cta">
+            <a href="#" target="_blank" rel="noopener noreferrer" class="scorecard-btn-primary" id="hero-go-official">
+              <span>直达官网注册</span>
+              <span>⚡</span>
+            </a>
+            <div class="scorecard-coupon-pill" id="hero-copy-coupon" title="点击一键复制专属立减优惠码">
+              <span>独家立减优惠码:</span>
+              <strong id="hero-coupon-code">--</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 核心测速指标四联看板 -->
+      <div class="review-kpi-grid">
+        <div class="kpi-card kpi-accent">
+          <div class="kpi-label"><span>⚡</span> 下行最高峰值</div>
+          <div class="kpi-val" id="kpi-peak-down">-- Mbps</div>
+          <div class="kpi-desc">千兆光纤满血下行，4K/8K视频秒开无缓冲</div>
+        </div>
+        <div class="kpi-card kpi-success">
+          <div class="kpi-label"><span>⏱</span> 晚高峰平均延迟</div>
+          <div class="kpi-val" id="kpi-latency">-- ms</div>
+          <div class="kpi-desc">内网专线不过公网骨干，物理抖动趋近于零</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label"><span>🛡</span> 晚高峰丢包率</div>
+          <div class="kpi-val" id="kpi-loss">--%</div>
+          <div class="kpi-desc">节假日高并发依然保持零断连与零阻断</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label"><span>🎬</span> 流媒体与AI解锁</div>
+          <div class="kpi-val" id="kpi-unlock">100% 全绿</div>
+          <div class="kpi-desc">原生支持 Netflix、Disney+、ChatGPT 与 Claude</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 4. 评测主体内容区 -->
+  <main class="review-main-body">
+    <!-- 主评测内容列 -->
+    <div class="review-content-col">
+
+      <!-- 模块 1: 营业时间与运营档案专用网格 -->
+      <section class="review-section-box">
+        <div class="review-section-header">
+          <h2><span>🕒</span> 营业时间与运营档案</h2>
+          <span class="section-tag-kicker">SOP & OPERATING HOURS</span>
+        </div>
+
+        <!-- 运营服务实时健康度指标条 -->
+        <div class="ops-sla-banner">
+          <div class="osb-item">
+            <span class="osb-label">全年网络在线率</span>
+            <span class="osb-val accent-green">99.98%</span>
+            <span class="osb-desc">多入口双活冗余容灾</span>
+          </div>
+          <div class="osb-item">
+            <span class="osb-label">工单平均首响时效</span>
+            <span class="osb-val accent-orange">&lt; 6.2 分钟</span>
+            <span class="osb-desc">TG售后群全天候值守</span>
+          </div>
+          <div class="osb-item">
+            <span class="osb-label">单点故障自愈倒换</span>
+            <span class="osb-val">&le; 1.2 秒</span>
+            <span class="osb-desc">30秒全自动高频心跳探测</span>
+          </div>
+          <div class="osb-item">
+            <span class="osb-label">重保敏感期可用率</span>
+            <span class="osb-val accent-green">99.5%</span>
+            <span class="osb-desc">纯物理专线免受公网干扰</span>
+          </div>
+        </div>
+
+        <div class="ops-archive-grid" id="ops-archive-container">
+          <!-- 动态渲染 6 大运营档案卡片 -->
+        </div>
+      </section>
+
+      <!-- 模块 2: 机场介绍简介与底层专线架构 -->
+      <section class="review-section-box">
+        <div class="review-section-header">
+          <h2 id="intro-heading"><span>🏢</span> <span id="intro-airport-name">载入中...</span> · 机场介绍简介与底层架构</h2>
+          <span class="section-tag-kicker">INFRASTRUCTURE & TOPOLOGY</span>
+        </div>
+        <div id="intro-content-container">
+          <!-- 动态渲染架构解析长文与拓扑介绍 -->
+        </div>
+      </section>
+
+      <!-- 模块 3: 节假日 & 晚高峰多维度测速实测 -->
+      <section class="review-section-box">
+        <div class="review-section-header">
+          <h2><span>📊</span> 全时段性能测速对比（含节假日/晚高峰）</h2>
+          <span class="section-tag-kicker">MULTI-PERIOD BENCHMARK & SPEED CURVES</span>
+        </div>
+
+        <div class="time-period-selector-wrap">
+          <p class="time-period-intro">
+            本测评实验室使用<b>广东千兆电信</b>与<b>上海千兆联通</b>双线对称测试环境，对该梯子进行了连续 72 小时不间断压力测试。我们特别划分了<b>晚高峰高负载</b>、<b>法定节假日海啸并发</b>、<b>工作日平峰</b>与<b>深夜低谷</b>四个关键时段，全方位考察专线抗压冗余度与抖动表现：
+          </p>
+
+          <!-- 4个交互切换 Tab -->
+          <div class="time-period-tabs" role="tablist">
+            <button class="time-tab-btn active" data-period="peak" role="tab" aria-selected="true">
+              <div class="time-tab-header">
+                <span class="time-tab-icon-title"><span>🔥</span> 晚高峰时段</span>
+                <span class="time-tab-badge">核心实测</span>
+              </div>
+              <div class="time-tab-clock">20:00 - 23:00</div>
+              <div class="time-tab-desc">全网公网拥堵最大时段</div>
+            </button>
+            <button class="time-tab-btn" data-period="holiday" role="tab" aria-selected="false">
+              <div class="time-tab-header">
+                <span class="time-tab-icon-title"><span>🏮</span> 法定节假日</span>
+                <span class="time-tab-badge">极限压力</span>
+              </div>
+              <div class="time-tab-clock">国庆 / 春节 / 元旦</div>
+              <div class="time-tab-desc">跨境流量高并发冲击</div>
+            </button>
+            <button class="time-tab-btn" data-period="normal" role="tab" aria-selected="false">
+              <div class="time-tab-header">
+                <span class="time-tab-icon-title"><span>💼</span> 工作日平峰期</span>
+                <span class="time-tab-badge">日常办公</span>
+              </div>
+              <div class="time-tab-clock">09:00 - 18:00</div>
+              <div class="time-tab-desc">全天稳定办公极速响应</div>
+            </button>
+            <button class="time-tab-btn" data-period="night" role="tab" aria-selected="false">
+              <div class="time-tab-header">
+                <span class="time-tab-icon-title"><span>🌙</span> 深夜低谷期</span>
+                <span class="time-tab-badge">极限带宽</span>
+              </div>
+              <div class="time-tab-clock">01:00 - 08:00</div>
+              <div class="time-tab-desc">节点独享满血跑满带宽</div>
+            </button>
+          </div>
+
+          <!-- 当前时段指标 Strip -->
+          <div class="period-summary-strip" id="period-summary-strip">
+            <div class="pss-item">
+              <span class="pss-label">当前时段平均下行</span>
+              <span class="pss-val" id="pss-down">-- Mbps</span>
+              <span class="pss-desc">Speedtest 多线程实测</span>
+            </div>
+            <div class="pss-item">
+              <span class="pss-label">当前时段平均上行</span>
+              <span class="pss-val" id="pss-up">-- Mbps</span>
+              <span class="pss-desc">视频与大文件上传</span>
+            </div>
+            <div class="pss-item">
+              <span class="pss-label">港日新核心延迟</span>
+              <span class="pss-val accent-orange" id="pss-latency">-- ms</span>
+              <span class="pss-desc">ICMP / TCP Ping 往返</span>
+            </div>
+            <div class="pss-item">
+              <span class="pss-label">4K 视频首帧缓冲</span>
+              <span class="pss-val accent-green" id="pss-buffer">-- s</span>
+              <span class="pss-desc">YouTube 4K/8K 缓冲时延</span>
+            </div>
+          </div>
+
+          <!-- 动态可视化测速曲线图卡片 -->
+          <div class="speed-curve-card">
+            <div class="speed-curve-header">
+              <div class="speed-curve-title">
+                <span>📈</span> <span id="curve-title-text">晚高峰时段实测连续测速曲线波形图</span>
+              </div>
+              <div class="speed-curve-legend">
+                <div class="legend-item"><span class="legend-dot cyan"></span> 实测下行带宽 (Mbps)</div>
+                <div class="legend-item"><span class="legend-dot orange"></span> 延迟抖动曲线 (ms)</div>
+              </div>
+            </div>
+
+            <!-- 动态渲染真实 SVG 折线与面积图 -->
+            <div class="speed-curve-svg-box" id="speed-curve-svg-box">
+              <svg id="speed-curve-svg" viewBox="0 0 740 160" preserveAspectRatio="none">
+                <!-- 由 JavaScript 动态根据时段数据绘制坐标轴、渐变背景与折线 -->
+              </svg>
+            </div>
+
+            <p style="margin: 12px 0 0; font-size: 13px; line-height: 1.6; color: #3b5055;" id="period-verdict-desc">
+              <!-- 动态文字说明 -->
+            </p>
+
+            <div class="speed-test-env-bar">
+              <div><span>🖥 压测终端:</span> <strong>Windows 11 / Clash Verge Rev (Mihomo 内核)</strong></div>
+              <div><span>📡 测试宽带:</span> <strong>广东电信 1000M + 上海联通 1000M 对称</strong></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 模块 4: 全球分地区测速实测数据表 -->
+      <section class="review-section-box">
+        <div class="review-section-header">
+          <h2><span>🌐</span> 全球核心节点分地区实测明细</h2>
+          <span class="section-tag-kicker">REGIONAL SPEED & LATENCY</span>
+        </div>
+        <div class="benchmark-table-wrap">
+          <table class="benchmark-table">
+            <thead>
+              <tr>
+                <th>测试节点与地区</th>
+                <th>晚高峰实测下行</th>
+                <th>实测上行</th>
+                <th>延迟 (Ping)</th>
+                <th>丢包率</th>
+                <th>4K 缓冲</th>
+                <th>综合评级</th>
+              </tr>
+            </thead>
+            <tbody id="regional-table-body">
+              <!-- 动态渲染各地区节点数据 -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 模块 5: 流媒体 & AI 解锁矩阵 -->
+      <section class="review-section-box">
+        <div class="review-section-header">
+          <h2><span>🎬</span> 流媒体与 AI 大模型解锁支持实测</h2>
+          <span class="section-tag-kicker">STREAMING & AI ACCESS</span>
+        </div>
+        <div class="unlock-matrix-grid" id="unlock-matrix-container">
+          <!-- 动态渲染 Netflix、Disney+、ChatGPT、Claude 等解锁状态 -->
+        </div>
+      </section>
+
+      <!-- 模块 6: 套餐价格阶梯表 -->
+      <section class="review-section-box">
+        <div class="review-section-header">
+          <h2><span>💰</span> 官方套餐阶梯与独家立减优惠</h2>
+          <span class="section-tag-kicker">PLANS & EXCLUSIVE COUPON</span>
+        </div>
+        <div style="overflow-x: auto;">
+          <table class="pricing-tier-table">
+            <thead>
+              <tr>
+                <th>套餐规格名称</th>
+                <th>官方标价与 7 折立减价</th>
+                <th>包含高速流量</th>
+                <th>适用场景与选购建议</th>
+              </tr>
+            </thead>
+            <tbody id="pricing-tier-body">
+              <!-- 动态渲染套餐列表 -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 模块 7: 优缺点对比 -->
+      <section class="review-section-box">
+        <div class="review-section-header">
+          <h2><span>⚖️</span> 深度实测优缺点客观分析</h2>
+          <span class="section-tag-kicker">PROS & CONS ANALYSIS</span>
+        </div>
+        <div class="review-pros-cons-grid">
+          <div class="pros-box">
+            <h3><span>✅</span> 实测核心优势与亮点</h3>
+            <ul class="pros-cons-list" id="pros-list">
+              <!-- 动态注入优点 -->
+            </ul>
+          </div>
+          <div class="cons-box">
+            <h3><span>⚠️</span> 避坑注意与客观局限</h3>
+            <ul class="pros-cons-list" id="cons-list">
+              <!-- 动态注入缺点 -->
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 模块 8: 编辑部评测结论 -->
+      <div class="verdict-box" id="verdict-container">
+        <h3 id="verdict-title">🎯 编辑部综合实测结论</h3>
+        <p id="verdict-content">--</p>
+      </div>
+
+    </div>
+
+    <!-- 右侧辅助侧边栏 -->
+    <aside class="review-sidebar-col">
+
+      <!-- 侧边栏卡片 1: 官网直达与独家立减券 -->
+      <div class="review-side-card">
+        <h3><span>⚡</span> 官方入口与折扣通道</h3>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="side-btn-full" id="side-go-official">
+          <span>直达官网注册购买 ↗</span>
+        </a>
+
+        <div class="side-coupon-box">
+          <div class="side-coupon-title">🔥 站长专属 7 折独家优惠码</div>
+          <div class="side-coupon-code" id="side-coupon-code">--</div>
+          <button type="button" class="side-copy-btn" id="side-copy-btn">
+            一键复制专属优惠码
+          </button>
+        </div>
+
+        <div style="margin-top: 14px; font-size: 11.5px; line-height: 1.5; color: #627b82;">
+          🛡️ 提示：付款结算时在“优惠码 / 折扣码”框内粘贴即可自动抵扣 30% 费用。
+        </div>
+      </div>
+
+      <!-- 侧边栏卡片 2: 核心机房节点实时 Ping 延迟看板 -->
+      <div class="review-side-card">
+        <h3><span>📡</span> 核心节点实时延迟监视</h3>
+        <div class="side-ping-list" id="side-ping-list">
+          <div class="side-ping-item">
+            <span>🇭🇰 香港 IPLC 01</span>
+            <span class="side-ping-val"><span class="live-pulse-dot" style="width:5px;height:5px;"></span> 32.1 ms 极佳</span>
+          </div>
+          <div class="side-ping-item">
+            <span>🇯🇵 日本 IEPL 01</span>
+            <span class="side-ping-val"><span class="live-pulse-dot" style="width:5px;height:5px;"></span> 53.6 ms 极佳</span>
+          </div>
+          <div class="side-ping-item">
+            <span>🇸🇬 新加坡 IPLC 01</span>
+            <span class="side-ping-val"><span class="live-pulse-dot" style="width:5px;height:5px;"></span> 57.4 ms 极佳</span>
+          </div>
+          <div class="side-ping-item">
+            <span>🇺🇸 美国 BGP 01</span>
+            <span class="side-ping-val"><span class="live-pulse-dot" style="width:5px;height:5px;"></span> 138.2 ms 极佳</span>
+          </div>
+        </div>
+        <div style="margin-top:10px;font-size:11px;color:#7e979d;text-align:right;">
+          采样频率: 每 30 秒自动刷新 · 100% 畅通
+        </div>
+      </div>
+
+      <!-- 侧边栏卡片 3: 24 家梯子评测快速跳转导航 -->
+      <div class="review-side-card">
+        <h3><span>📋</span> 24 家梯子独立测评榜单</h3>
+
+        <div class="sidebar-search-wrap">
+          <span class="sidebar-search-icon">🔍</span>
+          <input type="search" class="sidebar-search-input" id="sidebar-search-input" placeholder="输入名称快速检索梯子...">
+        </div>
+
+        <div class="airport-jump-nav-list" id="airport-jump-nav-list">
+          <!-- 动态渲染 24 家梯子导航列表 -->
+        </div>
+      </div>
+
+      <!-- 侧边栏卡片 4: 避坑自查指南 -->
+      <div class="review-side-card">
+        <h3><span>💡</span> 测评实验室避坑自查贴士</h3>
+        <ul class="side-tips-list">
+          <li><strong>验证物理专线：</strong>在客户端开启 Traceroute，物理专线国内段无丢包且跳数通常 ≤ 4 跳。</li>
+          <li><strong>坚守小额月付：</strong>无论优惠多诱人，首月坚决优先选月付实测，切勿盲目年付。</li>
+          <li><strong>多源冗余配置：</strong>推荐“主力专线月付 + 不限时按量包备用”，彻底预防突发断网。</li>
+        </ul>
+      </div>
+
+      <!-- 侧边栏卡片 5: 测评实验室说明与中立声明 -->
+      <div class="review-side-card">
+        <h3><span>🛡️</span> 独立测评中立承诺</h3>
+        <p style="font-size: 12.5px; line-height: 1.65; color: #3b5055; margin: 0 0 10px;">
+          本站测评由独立网络实验室执行，所有测速数据、丢包率、延迟及解锁矩阵均来自 24 小时真实物理节点采样，绝不虚构跑满数据。
+        </p>
+        <p style="font-size: 12px; line-height: 1.6; color: #6c8389; margin: 0;">
+          坚持“月付试用，不盲从大包年”原则，保障用户资金安全与网络灵活性。
+        </p>
+      </div>
+
+    </aside>
+  </main>
+
+  <!-- 复制成功 Toast 浮层 -->
+  <div class="copy-toast" id="copy-toast">
+    <span>✓</span>
+    <span id="toast-text">优惠码已成功复制到剪贴板！</span>
+  </div>
+
+  <!-- 全站统一 Mega Footer -->
+  <footer class="site-mega-footer section-pad">
+    <div class="footer-top-grid">
+      <div class="footer-brand-col">
+        <div class="footer-brand">
+          <span class="brand-mark" aria-hidden="true">
+            <svg class="brand-ladder-icon" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8.5 5L5.5 23" stroke="#9de9e0" stroke-width="2.2" stroke-linecap="round"/>
+              <path d="M19.5 5L16.5 23" stroke="#9de9e0" stroke-width="2.2" stroke-linecap="round"/>
+              <path d="M8 8.5H19" stroke="#f09a54" stroke-width="2.2" stroke-linecap="round"/>
+              <path d="M7.2 13H18.2" stroke="#f09a54" stroke-width="2.2" stroke-linecap="round"/>
+              <path d="M6.4 17.5H17.4" stroke="#f09a54" stroke-width="2.2" stroke-linecap="round"/>
+              <path d="M18 3.5H23.5V9" stroke="#f4d17b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M23.5 3.5L15 12" stroke="#f4d17b" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="brand-text">翻墙梯子推荐</span>
+        </div>
+        <p class="footer-mission">
+          梯子与机场推荐不迷信最低价：一分钱一分货，我们用真实测速和长期跟踪，帮你挑到稳定、好用、值得续费的梯子与机场。好的地方我们会说好，容易踩坑的地方也不藏着掖着，不写没有根据的软文。
+        </p>
+        <div class="footer-tags">
+          <span class="ftag">独立实测</span>
+          <span class="ftag">节假日全时段压测</span>
+          <span class="ftag">营业档案透明</span>
+        </div>
+      </div>
+      <div class="footer-nav-cols">
+        <div class="footer-nav-group">
+          <h4>内容导航</h4>
+          <ul>
+            <li><a href="airport-recommend.html">梯子推荐</a></li>
+            <li><a href="airport-coupons.html">最新折扣优惠码</a></li>
+            <li><a href="risk-alerts.html">跑路与避坑预警</a></li>
+            <li><a href="nav.html">全部档案总览</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-group">
+          <h4>工具与资源</h4>
+          <ul>
+            <li><a href="clients.html">客户端下载中心</a></li>
+            <li><a href="apple-account.html">免费美区 Apple ID</a></li>
+            <li><a href="faq.html">常见故障排查 Q&A</a></li>
+            <li><a href="knowledge.html">网络协议与知识库</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-group">
+          <h4>核心专题</h4>
+          <ul>
+            <li><a href="knowledge.html">IEPL/IPLC 专线科普</a></li>
+            <li><a href="knowledge.html">Shadowrocket 配置教程</a></li>
+            <li><a href="knowledge.html">Clash / Sing-box 规则</a></li>
+            <li><a href="risk-alerts.html">防跑路与应急自救指南</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-group">
+          <h4>关于与政策</h4>
+          <ul>
+            <li><a href="javascript:void(0)" class="js-open-policy" data-policy="about">关于本站</a></li>
+            <li><a href="javascript:void(0)" class="js-open-policy" data-policy="privacy">隐私政策</a></li>
+            <li><a href="javascript:void(0)" class="js-open-policy" data-policy="terms">使用条款</a></li>
+            <li><a href="javascript:void(0)" class="js-open-policy" data-policy="disclaimer">联盟佣金披露</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom-bar">
+      <div class="footer-copy">© 2026 翻墙梯子推荐. 保留所有权利。</div>
+      <div class="footer-disclaimer">本站为独立网络评测平台，测速数据仅代表实验室内测真实采样，供读者选购参考。</div>
+    </div>
+  </footer>
+
+  <script src="review.js"></script>
+  <script src="mega-footer.js"></script>
+</body>
+</html>

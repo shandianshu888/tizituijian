@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  <!-- 首页 · 2026翻墙梯子推荐与科学上网导航 -->
+  <url>
+    <loc>https://fqtizituijian.com/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.00</priority>
+  </url>
+
+  <!-- 梯子推荐排行榜 · 24家梯子机场实测天梯榜 -->
+  <url>
+    <loc>https://fqtizituijian.com/airport-recommend.html</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- 深度实测评测 · 营业时间/架构/全时段测速图 -->
+  <url>
+    <loc>https://fqtizituijian.com/review.html</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- 机场优惠券 · 独家7折优惠码与折扣测算 -->
+  <url>
+    <loc>https://fqtizituijian.com/airport-coupons.html</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- 跑路预警 · 防跑路自检与突发应急SOP -->
+  <url>
+    <loc>https://fqtizituijian.com/risk-alerts.html</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- 客户端下载中心 · Windows/Mac/iOS/Android官方安装包 -->
+  <url>
+    <loc>https://fqtizituijian.com/clients.html</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- 免费苹果 Apple ID · 小火箭Shadowrocket下载共享账号 -->
+  <url>
+    <loc>https://fqtizituijian.com/apple-account.html</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- 网络协议与知识百科 · Shadowsocks/Trojan/VLESS与GEO生成式AI智库 -->
+  <url>
+    <loc>https://fqtizituijian.com/knowledge.html</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- 常见故障排查 Q&A · 连不上/打不开/晚高峰掉速疑难解答 -->
+  <url>
+    <loc>https://fqtizituijian.com/faq.html</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- 全部档案总览 · 全网梯子导航核心资源索引 -->
+  <url>
+    <loc>https://fqtizituijian.com/nav.html</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- 关于我们 · 独立评测团队介绍与官方TG社群 -->
+  <url>
+    <loc>https://fqtizituijian.com/about.html</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+</urlset>

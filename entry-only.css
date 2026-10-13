@@ -1,0 +1,8 @@
+/* 入口页模式：隐藏截图 2 中的正文，仅保留可返回首页的封面 */
+body.entry-only .ticker,
+body.entry-only #manifesto,
+body.entry-only #nav,
+body.entry-only .quote,
+body.entry-only .site-footer { display:none !important; }
+body.entry-only .hero { min-height:calc(100vh - 78px); height:calc(100vh - 78px); }
+body.entry-only .scroll-cue { display:none; }

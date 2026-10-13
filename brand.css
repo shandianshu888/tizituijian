@@ -1,0 +1,279 @@
+/* ============================================================
+   全新品牌标识系统 (Brand Logo & Ladder Mark)
+   ============================================================ */
+.brand {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  text-decoration: none !important;
+}
+
+.brand-mark {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 9px !important;
+  background: linear-gradient(145deg, #0d1e2b 0%, #17384e 100%) !important;
+  border: 1.2px solid rgba(157, 233, 224, 0.45) !important;
+  box-shadow: 2.5px 2.5px 0 #f09a54 !important;
+  transform: rotate(-4deg) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  flex-shrink: 0 !important;
+  box-sizing: border-box !important;
+  overflow: visible !important;
+}
+
+.brand:hover .brand-mark {
+  transform: rotate(0deg) scale(1.08) !important;
+  box-shadow: 3.5px 3.5px 0 var(--cyan) !important;
+  border-color: var(--cyan) !important;
+}
+
+.brand-ladder-icon {
+  display: block !important;
+  width: 22px !important;
+  height: 22px !important;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.4)) !important;
+}
+
+.brand span:not(.brand-mark) {
+  font-weight: 800 !important;
+  letter-spacing: -0.04em !important;
+  color: inherit !important;
+}
+
+.brand small {
+  font-family: 'DM Mono', monospace !important;
+  font-size: 9.5px !important;
+  letter-spacing: 0.14em !important;
+  opacity: 0.65 !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  margin-left: 2px !important;
+}
+
+/* ============================================================
+   大站多栏专业页脚 (Mega Footer System)
+   ============================================================ */
+.site-mega-footer {
+  background: #fbf9f4 !important;
+  border-top: 1.5px solid #e2e0d8 !important;
+  padding-top: 56px !important;
+  padding-bottom: 40px !important;
+  color: #101923 !important;
+  margin-top: 70px !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.footer-top-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 2.75fr;
+  gap: 48px;
+  margin-bottom: 40px;
+}
+
+.footer-brand-col {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-brand .brand-mark {
+  width: 34px !important;
+  height: 34px !important;
+  border-radius: 9px !important;
+}
+
+.footer-brand .brand-text {
+  font: 800 20px 'Noto Serif SC', 'Manrope', serif;
+  letter-spacing: -0.04em;
+  color: #101923;
+}
+
+.footer-mission {
+  font-size: 13.5px;
+  line-height: 1.8;
+  color: #475569;
+  margin: 0;
+  max-width: 420px;
+}
+
+.footer-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.footer-tags .ftag {
+  font: 700 11px 'DM Mono', monospace;
+  background: #edece6;
+  color: #1e293b;
+  border: 1px solid #d5d3cb;
+  padding: 3px 8px;
+  border-radius: 3px;
+}
+
+.footer-nav-cols {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+.footer-nav-group h4 {
+  font: 800 14px 'Manrope', 'Noto Serif SC', sans-serif;
+  color: #0f172a;
+  margin: 0 0 16px;
+  letter-spacing: 0.02em;
+  position: relative;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #101923;
+  width: fit-content;
+}
+
+.footer-nav-group ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.footer-nav-group ul li a {
+  font-size: 13px;
+  color: #475569;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.footer-nav-group ul li a:hover {
+  color: #e87333;
+  transform: translateX(4px);
+}
+
+.footer-bottom-bar {
+  border-top: 1px solid #e2e0d8;
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 12px;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.footer-copy {
+  font-weight: 700;
+  color: #1e293b;
+  font-family: 'DM Mono', monospace;
+}
+
+.footer-disclaimer {
+  color: #64748b;
+  max-width: 960px;
+}
+
+/* 政策/关于模态弹窗 */
+.policy-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(16, 25, 35, 0.72);
+  backdrop-filter: blur(8px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+.policy-modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+.policy-modal-card {
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 14px;
+  max-width: 580px;
+  width: 100%;
+  padding: 32px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  position: relative;
+  transform: translateY(16px);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  max-height: 85vh;
+  overflow-y: auto;
+}
+.policy-modal-overlay.active .policy-modal-card {
+  transform: translateY(0);
+}
+.policy-modal-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: #f1f5f9;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 16px;
+  color: #64748b;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: all 0.2s;
+}
+.policy-modal-close:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+.policy-modal-card h3 {
+  font: 800 20px 'Noto Serif SC', serif;
+  color: #0f172a;
+  margin: 0 0 16px;
+}
+.policy-modal-card p {
+  font-size: 14px;
+  line-height: 1.75;
+  color: #475569;
+  margin: 0 0 14px;
+}
+.policy-modal-card ul {
+  padding-left: 20px;
+  color: #475569;
+  font-size: 13.5px;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+@media(max-width: 900px) {
+  .footer-top-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .footer-nav-cols {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+@media(max-width: 540px) {
+  .footer-nav-cols {
+    grid-template-columns: 1fr;
+  }
+}

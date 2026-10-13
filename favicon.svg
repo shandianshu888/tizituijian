@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1e2b"/>
+      <stop offset="100%" stop-color="#17384e"/>
+    </linearGradient>
+  </defs>
+  <!-- Rotated Brand Badge (-4 degrees) -->
+  <g transform="rotate(-4 32 32)">
+    <!-- Offset Warm Orange Shadow -->
+    <rect x="7" y="7" width="50" height="50" rx="14" fill="#f09a54"/>
+    <!-- Main Dark Badge -->
+    <rect x="4" y="4" width="50" height="50" rx="14" fill="url(#bgGrad)" stroke="#9de9e0" stroke-width="2.2" stroke-opacity="0.9"/>
+    <!-- Ladder & Climbing Arrow Icon -->
+    <g transform="translate(14, 14) scale(1.1)">
+      <!-- Cyan Rails -->
+      <path d="M8.5 5L5.5 23" stroke="#9de9e0" stroke-width="2.6" stroke-linecap="round"/>
+      <path d="M19.5 5L16.5 23" stroke="#9de9e0" stroke-width="2.6" stroke-linecap="round"/>
+      <!-- Orange Rungs -->
+      <path d="M8 8.5H19" stroke="#f09a54" stroke-width="2.6" stroke-linecap="round"/>
+      <path d="M7.2 13H18.2" stroke="#f09a54" stroke-width="2.6" stroke-linecap="round"/>
+      <path d="M6.4 17.5H17.4" stroke="#f09a54" stroke-width="2.6" stroke-linecap="round"/>
+      <!-- Golden Arrow (Ascending over the wall) -->
+      <path d="M18 3.5H23.5V9" stroke="#f4d17b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M23.5 3.5L15 12" stroke="#f4d17b" stroke-width="2.6" stroke-linecap="round"/>
+    </g>
+  </g>
+</svg>

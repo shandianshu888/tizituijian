@@ -1,0 +1,22 @@
+/* 封面动态层：轻微、持续，不影响文字阅读 */
+.hero:after,.nav-cover:after{background-size:220px 220px;animation:fieldDrift 26s linear infinite}
+.hero-art{animation:artFloat 12s ease-in-out infinite alternate}
+.orbit-a{animation:orbitPulse 9s ease-in-out infinite alternate}
+.orbit-b{animation:orbitPulse 13s ease-in-out infinite alternate-reverse}
+.route-a{animation:routeSweep 8s ease-in-out infinite alternate}
+.route-b{animation:routeSweep 11s ease-in-out infinite alternate-reverse}
+.route-c{animation:routeSweep 7s ease-in-out infinite alternate}
+.node{animation:nodeBreath 2.8s ease-in-out infinite}
+.n2{animation-delay:.8s}.n3{animation-delay:1.5s}.n4{animation-delay:2.1s}
+.compass{animation:compassFloat 6s ease-in-out infinite}
+.hero h1{animation:titleIn .9s cubic-bezier(.2,.7,.2,1) both}
+.hero-intro{animation:titleIn 1s .12s cubic-bezier(.2,.7,.2,1) both}
+.hero-actions{animation:titleIn 1s .22s cubic-bezier(.2,.7,.2,1) both}
+@keyframes fieldDrift{from{background-position:0 0}to{background-position:220px 110px}}
+@keyframes artFloat{from{transform:translate3d(0,0,0) scale(1)}to{transform:translate3d(-12px,8px,0) scale(1.015)}}
+@keyframes orbitPulse{from{transform:rotate(-20deg) scale(1);opacity:.45}to{transform:rotate(-14deg) scale(1.06);opacity:.9}}
+@keyframes routeSweep{from{opacity:.35;filter:brightness(.8)}to{opacity:1;filter:brightness(1.5)}}
+@keyframes nodeBreath{0%,100%{transform:scale(.78);opacity:.55}50%{transform:scale(1.35);opacity:1}}
+@keyframes compassFloat{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-8px) rotate(3deg)}}
+@keyframes titleIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+@media (prefers-reduced-motion:reduce){.hero:after,.nav-cover:after,.hero-art,.orbit-a,.orbit-b,.route-a,.route-b,.route-c,.node,.compass,.hero h1,.hero-intro,.hero-actions{animation:none!important}}

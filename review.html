@@ -43,6 +43,7 @@
       </div>
     </div>
     <div class="review-nav-right">
+      <a class="tg-header-badge" href="https://t.me/shandianjiaoliu" target="_blank" rel="noopener noreferrer">✈️ 官方 TG 交流群 ↗</a>
       <div class="review-airport-selector">
         <label for="airport-select">选择测评目标:</label>
         <select id="airport-select" aria-label="切换梯子评测目标">
@@ -325,14 +326,95 @@
         </div>
       </section>
 
-      <!-- 模块 5: 流媒体 & AI 解锁矩阵 -->
-      <section class="review-section-box">
+      <!-- 模块 5: 流媒体与 TikTok 国际短视频解锁深度实测 -->
+      <section class="review-section-box" id="section-streaming-benchmark">
         <div class="review-section-header">
-          <h2><span>🎬</span> 流媒体与 AI 大模型解锁支持实测</h2>
-          <span class="section-tag-kicker">STREAMING & AI ACCESS</span>
+          <h2><span>🎬</span> 流媒体与 TikTok 国际短视频解锁深度实测</h2>
+          <span class="section-tag-kicker">STREAMING & TIKTOK BENCHMARK</span>
         </div>
-        <div class="unlock-matrix-grid" id="unlock-matrix-container">
-          <!-- 动态渲染 Netflix、Disney+、ChatGPT、Claude 等解锁状态 -->
+
+        <!-- 流媒体与 TikTok 关键指标实时健康度横幅 -->
+        <div class="streaming-summary-banner">
+          <div class="ssb-item">
+            <span class="ssb-label">TikTok 免拔卡直连率</span>
+            <span class="ssb-val accent-green" id="ssb-tiktok-rate">100% 极速</span>
+            <span class="ssb-desc">免拔手机卡 · 规则分流直连</span>
+          </div>
+          <div class="ssb-item">
+            <span class="ssb-label">4K/8K 视频首帧秒开</span>
+            <span class="ssb-val accent-green" id="ssb-4k-rate">&lt; 0.35 秒</span>
+            <span class="ssb-desc">YouTube / Netflix 原生画质</span>
+          </div>
+          <div class="ssb-item">
+            <span class="ssb-label">创作者 0 播放风控防范</span>
+            <span class="ssb-val accent-orange" id="ssb-risk-rate">纯净低风险</span>
+            <span class="ssb-desc">原生住宅 / 高信誉机房出口</span>
+          </div>
+          <div class="ssb-item">
+            <span class="ssb-label">流媒体全平台综合支持</span>
+            <span class="ssb-val accent-green" id="ssb-streaming-rate">全绿通过</span>
+            <span class="ssb-desc">覆盖全球主流视听与AI大模型</span>
+          </div>
+        </div>
+
+        <!-- TikTok 专项深度测评核心大看板 -->
+        <div class="tiktok-benchmark-card" id="tiktok-benchmark-card">
+          <!-- 由 JS 动态渲染当前梯子的 TikTok 专项评测数据 -->
+        </div>
+
+        <!-- 全平台流媒体与 AI 解锁分类切换矩阵 -->
+        <div class="streaming-category-wrapper">
+          <div class="streaming-section-intro">
+            <h3><span>🌐</span> 全球主流视听与 AI 大模型原生解锁支持矩阵</h3>
+            <p>基于原生落地 IP 与智能 SmartDNS 分流技术，针对海外各大长视频、区域限定动漫与 AI 生产力工具进行全面连通性与画质深度检测：</p>
+          </div>
+
+          <div class="streaming-tabs-bar" role="tablist" aria-label="流媒体分类筛选">
+            <button type="button" class="streaming-tab-btn active" data-cat="all" role="tab" aria-selected="true">
+              <span>🌟</span> 全部视听与 AI 矩阵 (18+)
+            </button>
+            <button type="button" class="streaming-tab-btn" data-cat="short" role="tab" aria-selected="false">
+              <span>🎵</span> 短视频与海外社媒
+            </button>
+            <button type="button" class="streaming-tab-btn" data-cat="vod" role="tab" aria-selected="false">
+              <span>🎬</span> 热门影视长视频
+            </button>
+            <button type="button" class="streaming-tab-btn" data-cat="regional" role="tab" aria-selected="false">
+              <span>🎌</span> 亚太限定与二次元
+            </button>
+            <button type="button" class="streaming-tab-btn" data-cat="music" role="tab" aria-selected="false">
+              <span>🎧</span> 国际无损音乐
+            </button>
+            <button type="button" class="streaming-tab-btn" data-cat="ai" role="tab" aria-selected="false">
+              <span>🤖</span> AI 生产力大模型
+            </button>
+          </div>
+
+          <div class="unlock-matrix-grid" id="unlock-matrix-container">
+            <!-- 动态渲染各平台解锁状态卡片 -->
+          </div>
+        </div>
+
+        <!-- 流媒体与 TikTok 避坑实操指南 -->
+        <div class="streaming-tips-box" id="streaming-tips-box">
+          <div class="tips-box-header">
+            <span class="tips-box-icon">💡</span>
+            <h4>编辑部流媒体与 TikTok 避坑实操建议</h4>
+          </div>
+          <div class="tips-grid">
+            <div class="tip-col">
+              <strong>🎵 TikTok 免拔卡刷视频技巧：</strong>
+              <p>iOS 用户推荐使用 Shadowrocket (小火箭) 开启 HTTPS 解密及 TikTok 覆写脚本；Android 推荐开启全局 Tun 模式或 Sing-box 规则分流。建议在设置中将系统语言设为英文，时区与代理落地节点一致，可有效避免风控。</p>
+            </div>
+            <div class="tip-col">
+              <strong>🛡️ TikTok 出海小店与创作者防 0 播放：</strong>
+              <p>避免频繁切换不同国家的落地节点，固定使用同一家服务商的专用静态/高纯净度美区或英区节点。注册账号前先使用 ipinfo.io 确认出口 IP 伪装度达到 90% 以上。</p>
+            </div>
+            <div class="tip-col">
+              <strong>🎬 Netflix 与 Disney+ 观看提示：</strong>
+              <p>本站推荐的前列梯子均支持 Netflix 非自制剧原生全解（如《绝命毒师》《老友记》等）。家庭合租车队建议使用固定节点，避免多 IP 频繁轮换触发奈飞户主同住人验证。</p>
+            </div>
+          </div>
         </div>
       </section>
 

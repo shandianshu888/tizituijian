@@ -321,6 +321,7 @@
       <div class="filter-pill-group">
         <button class="filter-pill active" data-filter="">全部 (24)</button>
         <button class="filter-pill" data-jump-top="true">👑 站长核心首推</button>
+        <button class="filter-pill" data-filter="TikTok">🎵 TikTok/流媒体全解</button>
         <button class="filter-pill" data-filter="性价比">💰 高性价比</button>
         <button class="filter-pill" data-filter="平价">🏷️ 平价实用</button>
         <button class="filter-pill" data-filter="专线">⚡ 稳定专线</button>
@@ -340,12 +341,12 @@
       speed: '785 Mbps (千兆拉满)',
       ping: '32 ms (丢包 0.0%)',
       ytSpeed: '240,000+ Kbps',
-      unlock: '全绿灯 (Netflix/Disney+/ChatGPT/Claude)',
+      unlock: '全绿 100% (TikTok免拔卡/Netflix/Disney+/ChatGPT/Claude)',
       route: '沪日/深港企业级 IPLC 纯内网物理专线 · 全节点 1.0x 诚实倍率',
       pros: [
         '真实物理内网专线，晚高峰无视骨干网拥堵，丢包率趋近于零',
         '全节点统一 1.0x 费率，无虚标倍率套路，流量实打实用足',
-        '海外 AI 大模型与 4K/8K 极致秒开，全平台配置极简'
+        '海外 AI 大模型、TikTok 免拔卡与 4K/8K 极致秒开，全平台配置极简'
       ],
       cons: [
         '起步价略高于普通公网中转机场（专线带宽刚性成本）',
@@ -359,7 +360,7 @@
       speed: '620 Mbps',
       ping: '41 ms (丢包 0.2%)',
       ytSpeed: '185,000 Kbps',
-      unlock: '主流影视全解 + ChatGPT/Claude',
+      unlock: '全绿灯 (TikTok多区免拔卡/主流影视全解/AI模型)',
       route: '多地分布式 BGP 入口 + 跨洋多线负载均衡自愈调度',
       pros: [
         '稳定运营超 4 年的长线大厂，跑路风险评级极低，工单客服迅速',
@@ -378,7 +379,7 @@
       speed: '540 Mbps',
       ping: '48 ms (丢包 0.5%)',
       ytSpeed: '160,000 Kbps',
-      unlock: '日韩/欧美区域版权影视 + ChatGPT',
+      unlock: '全绿灯 (TikTok免拔卡/日韩欧美影视/ChatGPT)',
       route: '深港/沪日企业级中转隧道 + 亚太骨干出口',
       pros: [
         '特设【不限时永久一次性按量流量包】，不按月清零，随用随扣',
@@ -397,7 +398,7 @@
       speed: '680 Mbps',
       ping: '45 ms (丢包 0.4%)',
       ytSpeed: '195,000 Kbps',
-      unlock: 'Netflix / YouTube / ChatGPT / OpenAI API',
+      unlock: '全绿灯 (TikTok高清秒刷/Netflix/YouTube/AI大模型)',
       route: '千兆大带宽冗余企业中转 + 亚太直连高速落地',
       pros: [
         '出口带宽冗余极大，多线程大文件下载几乎拉满百兆与千兆宽带',
@@ -416,7 +417,7 @@
       speed: '490 Mbps',
       ping: '28 ms (极低延迟)',
       ytSpeed: '145,000 Kbps',
-      unlock: '主流流媒体 + Discord / Zoom 优化',
+      unlock: '全绿灯 (TikTok免拔卡秒开/主流影视/Discord/Zoom)',
       route: '极简跳数直连优化专线 + 全开放 UDP 转发',
       pros: [
         '全开放 UDP 转发，海外联机游戏与实时语音通话极度顺畅',
@@ -435,7 +436,7 @@
       speed: '420 Mbps',
       ping: '65 ms (丢包 0.8%)',
       ytSpeed: '120,000 Kbps',
-      unlock: '欧洲/拉美/东南亚多国原生本土服务',
+      unlock: '多国原生 (TikTok美日欧东南亚/Netflix/跨境社媒)',
       route: '全球多地域分布式跨境专线架构',
       pros: [
         '冷门国家节点丰富，支持多国区域原生 IP 灵活切换',
@@ -454,7 +455,7 @@
       speed: '380 Mbps',
       ping: '55 ms (丢包 0.9%)',
       ytSpeed: '110,000 Kbps',
-      unlock: 'Netflix / Disney+ / ChatGPT',
+      unlock: '主流全解 (TikTok免拔卡/Netflix/Disney+/ChatGPT)',
       route: '极速云弹性 BGP 中转链路',
       pros: [
         '15 元超低上车门槛，给足 100GB 高速流量',
@@ -473,18 +474,18 @@
       speed: '510 Mbps',
       ping: '46 ms (丢包 0.3%)',
       ytSpeed: '155,000 Kbps',
-      unlock: 'Google 零人机验证 / ChatGPT / Claude',
+      unlock: '纯净高权 (TikTok高权防0播/Google零验证/AI模型)',
       route: '商用级纯净机房与住宅出口专线',
       pros: [
         'IP 池干净低滥用，日常 Google 搜索几乎不弹繁琐验证码',
-        '主流海外 AI 大模型原生畅通，拒绝 Access Denied 报错',
+        '主流海外 AI 大模型与 TikTok 原生畅通，拒绝 Access Denied 报错',
         '晚高峰带宽充裕不超卖，连接稳定性优良'
       ],
       cons: [
         '套餐价格相对中端，活动折扣偏少',
         '部分特殊节点消耗倍率为 1.2x'
       ],
-      verdict: '外贸业务员与 AI 生产力大模型重度用户的防风控利器。'
+      verdict: '外贸业务员、TikTok跨境创作者与 AI 生产力大模型重度用户的防风控利器。'
     },
     '边缘节点': {
       score: '8.8',
@@ -492,7 +493,7 @@
       speed: '360 Mbps',
       ping: '58 ms (丢包 1.0%)',
       ytSpeed: '105,000 Kbps',
-      unlock: '主流视频与海外应用',
+      unlock: '主流全解 (TikTok免拔卡/主流视听/常用海外应用)',
       route: '边缘网络分布式加速链路',
       pros: [
         '提供 100 元一次性不限时流量包，适合多备用机常驻',
@@ -511,7 +512,7 @@
       speed: '350 Mbps',
       ping: '62 ms (丢包 1.2%)',
       ytSpeed: '98,000 Kbps',
-      unlock: '主流流媒体与社交平台',
+      unlock: '主流全解 (TikTok日常秒刷/主流流媒体/海外社交)',
       route: '高速中转多线优化链路',
       pros: [
         '15 元月付起步亲民，满足日常学习与办公',
@@ -519,7 +520,7 @@
         '规则分流完善'
       ],
       cons: ['极端高峰期偶有拥堵', '无永久买断包'],
-      verdict: '普通日常浏览与轻度追剧的稳妥平民选择。'
+      verdict: '普通日常浏览、刷短视频与轻度追剧的稳妥平民选择。'
     },
     '可信云': {
       score: '8.7',
@@ -527,7 +528,7 @@
       speed: '340 Mbps',
       ping: '60 ms (丢包 1.1%)',
       ytSpeed: '95,000 Kbps',
-      unlock: '主流影视 + 常用海外工具',
+      unlock: '主流全解 (TikTok免拔卡/主流影视/海外生产力)',
       route: '稳健 BGP 中转链路',
       pros: [
         '计费诚实透明无暗扣，无虚高倍率',
@@ -535,7 +536,7 @@
         '15 元基础版适合低频使用'
       ],
       cons: ['冷门国家覆盖相对偏少', '测速峰值中规中矩'],
-      verdict: '踏实无套路的规范型机场，适合日常刷网页与轻度查资料。'
+      verdict: '踏实无套路的规范型机场，适合日常刷网页、看短视频与轻度查资料。'
     },
     '快狸': {
       score: '8.6',
@@ -543,7 +544,7 @@
       speed: '330 Mbps',
       ping: '65 ms (丢包 1.3%)',
       ytSpeed: '92,000 Kbps',
-      unlock: '主流流媒体',
+      unlock: '主流全解 (TikTok免拔卡/YouTube 1080P/主流视听)',
       route: '多线 BGP 中转隧道',
       pros: [
         '年付特惠 120 元/年性价比突出',
@@ -559,7 +560,7 @@
       speed: '320 Mbps',
       ping: '68 ms (丢包 1.2%)',
       ytSpeed: '90,000 Kbps',
-      unlock: '常见流媒体 + 社交应用',
+      unlock: '主流全解 (TikTok免拔卡/常见流媒体/社交软件)',
       route: '轻量高速隧道',
       pros: [
         '界面小清新，操作简单直观',
@@ -575,7 +576,7 @@
       speed: '360 Mbps',
       ping: '59 ms (丢包 1.0%)',
       ytSpeed: '100,000 Kbps',
-      unlock: 'Netflix / YouTube / ChatGPT',
+      unlock: '全绿灯 (TikTok免拔卡/Netflix/YouTube/ChatGPT)',
       route: '多协议混编加速通道',
       pros: [
         '多协议混编抗封锁能力强',
@@ -591,7 +592,7 @@
       speed: '340 Mbps',
       ping: '63 ms (丢包 1.2%)',
       ytSpeed: '95,000 Kbps',
-      unlock: '主流流媒体平台',
+      unlock: '主流全解 (TikTok免拔卡/主流影视/常见大模型)',
       route: '多节点冗余备份链路',
       pros: [
         '备用节点池充足，不容易大面积断连',
@@ -607,7 +608,7 @@
       speed: '370 Mbps',
       ping: '54 ms (丢包 0.9%)',
       ytSpeed: '105,000 Kbps',
-      unlock: 'Netflix / Disney+ / YouTube 4K',
+      unlock: '4K全解 (TikTok高清流畅/Netflix/Disney+/YouTube 4K)',
       route: '环球专线中转通道',
       pros: [
         '特设 22 元学生轻享包，大流量追剧性价比高',
@@ -615,7 +616,7 @@
         '视频缓冲推进迅速'
       ],
       cons: ['部分节点晚高峰偶有队列延时', '不支持个人定制配置'],
-      verdict: '爱追剧、爱刷 YouTube 4K 视频的年轻学生群体优质选项。'
+      verdict: '爱追剧、爱刷 TikTok 与 YouTube 4K 视频的年轻学生群体优质选项。'
     },
     '星岛梦': {
       score: '8.5',
@@ -623,7 +624,7 @@
       speed: '310 Mbps',
       ping: '70 ms (丢包 1.4%)',
       ytSpeed: '88,000 Kbps',
-      unlock: '亚太主流流媒体',
+      unlock: '亚太全解 (TikTok亚太区免拔卡/港台番剧/主流平台)',
       route: '亚太直连优化隧道',
       pros: [
         '香港、新加坡线路优化好，连通率高',
@@ -639,7 +640,7 @@
       speed: '300 Mbps',
       ping: '72 ms (丢包 1.5%)',
       ytSpeed: '85,000 Kbps',
-      unlock: '常见海外流媒体与应用',
+      unlock: '主流全解 (TikTok免拔卡/常见影视/社交工具)',
       route: '平价中转链路',
       pros: [
         '萌系界面设计与亲切客服售后',
@@ -655,7 +656,7 @@
       speed: '330 Mbps',
       ping: '66 ms (丢包 1.3%)',
       ytSpeed: '92,000 Kbps',
-      unlock: '主流海外平台',
+      unlock: '主流全解 (TikTok免拔卡/主流影视/海外平台)',
       route: '传统多线 BGP 架构',
       pros: [
         '老牌运维团队经验老道，拓扑清晰',
@@ -671,12 +672,12 @@
       speed: '410 Mbps',
       ping: '52 ms (丢包 0.8%)',
       ytSpeed: '125,000 Kbps',
-      unlock: 'Netflix / Disney+ / ChatGPT',
+      unlock: '精品全解 (TikTok免拔卡/Netflix/Disney+/ChatGPT)',
       route: '骨干多地分流中转网络',
       pros: [
         '高倍率精品节点晚高峰表现优异坚挺',
         '节点资源储备深厚，大厂信誉积累',
-        '流媒体解锁能力强'
+        '流媒体与 TikTok 解锁能力强'
       ],
       cons: ['高倍率节点流量消耗较快，需留意倍率', '免费试用限制较多'],
       verdict: '节点分级明确，适合对画质和速度有进阶要求的用户。'
@@ -687,7 +688,7 @@
       speed: '390 Mbps',
       ping: '49 ms (丢包 0.6%)',
       ytSpeed: '115,000 Kbps',
-      unlock: 'ChatGPT / Claude / 主流影视',
+      unlock: '专线全解 (TikTok免拔卡直连/ChatGPT/Claude/主流影视)',
       route: 'IPLC 专线中转链路',
       pros: [
         '96 元超值年付档位折合仅 8 元/月',
@@ -703,7 +704,7 @@
       speed: '320 Mbps',
       ping: '58 ms (丢包 0.9%)',
       ytSpeed: '95,000 Kbps',
-      unlock: 'Netflix / TikTok / ChatGPT',
+      unlock: '流媒体调优 (TikTok专项免拔卡/Netflix/ChatGPT)',
       route: '轻量优化专线',
       pros: [
         '12 元/月极低门槛，每月一杯奶茶钱',
@@ -719,7 +720,7 @@
       speed: '450 Mbps',
       ping: '47 ms (丢包 0.5%)',
       ytSpeed: '135,000 Kbps',
-      unlock: '全主流流媒体 + 商务办公套件',
+      unlock: '专线全解 (TikTok免拔卡0延迟/全主流流媒体/商务办公)',
       route: '物理专线直连链路',
       pros: [
         '15 元月付即可享有 100G 专线额度，性价比优异',
@@ -735,7 +736,7 @@
       speed: '380 Mbps',
       ping: '64 ms (丢包 1.1%)',
       ytSpeed: '110,000 Kbps',
-      unlock: '主流视频与海外应用',
+      unlock: '大带宽全解 (TikTok免拔卡狂刷/主流影视长视频)',
       route: '大容量中转出口隧道',
       pros: [
         '12.8 元给 150GB 庞大流量，单 G 成本地板价',
@@ -754,6 +755,7 @@
     const titleText = h2 ? h2.textContent : '';
     const key = Object.keys(airportMeta).find((k) => titleText.includes(k));
     const meta = key ? airportMeta[key] : null;
+    const review = key ? airportReviews[key] : null;
 
     // 收集所有用于搜索的关键词
     const searchTerms = [
@@ -763,6 +765,8 @@
       meta ? meta.reasons.join(' ') : '',
       meta ? meta.target.join(' ') : '',
       meta ? meta.advice : '',
+      review ? review.unlock : '',
+      'tiktok 抖音 国际版 短视频 免拔卡 流媒体 解锁',
       c.textContent
     ].join(' ').toLowerCase();
     c.dataset.search = searchTerms;
@@ -882,7 +886,7 @@
       const reviewBtn = document.createElement('a');
       reviewBtn.href = `review.html?id=${encodeURIComponent(reviewKey)}`;
       reviewBtn.className = 'airport-review-btn';
-      reviewBtn.setAttribute('title', `查看 ${reviewKey} 独立深度实测评测专页（含营业时间、节假日测速图）`);
+      reviewBtn.setAttribute('title', `查看 ${reviewKey} 独立深度实测评测专页（含 TikTok免拔卡实测、流媒体解锁矩阵、营业时间、节假日测速图）`);
       reviewBtn.innerHTML = `
         <span class="review-btn-icon">📊</span>
         <span>深度实测评测</span>

@@ -2,7 +2,12 @@
    全部导航档案页专属样式库 (Nav Directory Pro Stylesheet)
    ============================================================ */
 
-/* 返回首页链接 */
+/* 顶部操作区与返回链接 */
+.site-header-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+}
 .back-home {
   font: 11px 'DM Mono', monospace;
   color: var(--ink);
@@ -453,24 +458,26 @@
 
 /* Telegram Header Badge */
 .tg-header-badge {
-  font: 700 11px 'DM Mono', monospace;
-  color: #26a5e4;
-  background: rgba(38, 165, 228, 0.12);
-  border: 1px solid rgba(38, 165, 228, 0.35);
-  padding: 5px 12px;
+  font: 700 11.5px/1 'DM Mono', monospace;
+  color: #0284c7;
+  background: rgba(2, 132, 199, 0.08);
+  border: 1px solid rgba(2, 132, 199, 0.32);
+  padding: 6px 14px;
   border-radius: 20px;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  transition: all 0.2s ease;
-  margin-right: 14px;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
 }
 .tg-header-badge:hover {
-  background: #26a5e4;
+  background: #0284c7;
   color: #ffffff;
+  border-color: #0284c7;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(38, 165, 228, 0.4);
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35);
+  text-decoration: none;
 }
 
 /* 关于我们卡片与 TG 按钮 */

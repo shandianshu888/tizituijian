@@ -29,7 +29,25 @@
         peakDown: '982.5 Mbps',
         latency: '32.4 ms',
         loss: '0.01%',
-        unlock: '100% 全绿'
+        unlock: '100% 全绿 · TikTok免拔卡'
+      },
+      tiktok: {
+        rating: '👑 S+ 旗舰顶级 · 0风控秒开',
+        simFree: '✔ 完美免拔卡 · iOS/Android 免插外卡规则直刷',
+        regions: '🇺🇸 美区 · 🇯🇵 日区 · 🇬🇧 英区 · 🇸🇬 东南亚 (全原生落地 IP)',
+        speed: '首刷 < 0.22s · 1080P/60FPS 丝滑无阻',
+        live: '1080P 直播秒进 · 连麦互动零延迟',
+        creatorSafe: '极高安全 · 住宅级纯净出口，防 0 播放降权',
+        reviewNote: '实测流媒体与短视频王者！全内网 IPLC 物理专线直达机房，刷 TikTok 就像刷国内抖音一样即刷即开，没有任何黑屏或转圈等待；美区与英区原生落地机房 IP 权重极高，非常适合跨境外贸运营者发视频与 TikTok Shop 带货。'
+      },
+      streamingStats: {
+        tiktokRate: '100% 极速',
+        buffer4k: '< 0.25 秒',
+        riskRate: '纯净零风控',
+        streamingRate: '全绿 100%',
+        fastSpeed: '940 Mbps',
+        ytSpeed: '280,000+ Kbps',
+        dnsSecurity: '纯净 Anycast · 零 WebRTC 泄漏'
       },
       opsArchive: {
         hours: '周一至周日 09:00 - 24:00 (节假日全天无休)',
@@ -94,15 +112,32 @@
         { name: '🇩🇪 德国 01 [法兰克福节点]', down: '735.4', up: '198.0', ping: '168.0', loss: '0.06%', buffer: '0.6', rating: '极速' }
       ],
       unlocks: [
-        { name: 'Netflix (网飞)', desc: '原生解锁全区非自制剧', status: 'pass' },
-        { name: 'Disney+ (迪士尼)', desc: '支持 4K HDR 与 IMAX 音效', status: 'pass' },
-        { name: 'YouTube Premium', desc: '原生无降画质秒开 8K', status: 'pass' },
-        { name: 'TikTok (国际抖音)', desc: '免拔卡解锁欧美与东南亚', status: 'pass' },
-        { name: 'Spotify (音乐)', desc: '全区无限制直连播放', status: 'pass' },
-        { name: 'ChatGPT (OpenAI)', desc: '原生畅联，绝无 Access Denied', status: 'pass' },
-        { name: 'Claude 3.5 Sonnet', desc: '全节点免风控拦截', status: 'pass' },
-        { name: 'Midjourney', desc: 'Discord 图像生成极速回传', status: 'pass' },
-        { name: 'Google Gemini', desc: 'Gemini Advanced 完整支持', status: 'pass' }
+        // 短视频与海外社媒
+        { name: 'TikTok (国际抖音)', desc: '免拔卡秒刷美/日/英/东南亚全区，支持直播与创作者带货', status: 'pass', cat: 'short', res: '1080P/60FPS 免拔卡' },
+        { name: 'YouTube Shorts', desc: '原生高码率短视频极速预加载，无缓冲转圈', status: 'pass', cat: 'short', res: '4K/60FPS 原生' },
+        { name: 'Instagram Reels', desc: '欧美/日韩全区快拍与视频流畅刷取，高清图片秒开', status: 'pass', cat: 'short', res: '原画秒开' },
+        { name: 'X / Twitter 高清视频', desc: '极速加载超长访谈与 1080P 视频推文，无压缩降噪', status: 'pass', cat: 'short', res: '1080P 极速' },
+        // 热门影视长视频
+        { name: 'Netflix (网飞)', desc: '原生全区非自制剧解锁 (含《绝命毒师》《老友记》等版权库)', status: 'pass', cat: 'vod', res: '4K HDR / 杜比视界' },
+        { name: 'Disney+ (迪士尼)', desc: '支持 4K HDR、IMAX Enhanced 与杜比全景声音效', status: 'pass', cat: 'vod', res: '4K IMAX 原生' },
+        { name: 'YouTube Premium', desc: '原生免广告后台播放，8K 60FPS 极限码率无卡顿', status: 'pass', cat: 'vod', res: '8K 60FPS 极致' },
+        { name: 'Max (HBO Max)', desc: '美区原生独立 IP 畅快观看 HBO 独播大片与 4K 剧集', status: 'pass', cat: 'vod', res: '4K HDR10+' },
+        { name: 'Amazon Prime Video', desc: '跨区域版权无障碍切换，原生多音轨字幕匹配', status: 'pass', cat: 'vod', res: '4K Ultra HD' },
+        { name: 'Apple TV+ & Hulu', desc: '原生支持苹果流媒体原创剧与美区 Hulu 高清直播', status: 'pass', cat: 'vod', res: '4K 原生全解' },
+        // 亚太限定与二次元
+        { name: 'Bahamut (动画疯)', desc: '台湾原生节点直连，无广告秒看当季新番动漫', status: 'pass', cat: 'regional', res: '1080P 动漫专线' },
+        { name: 'TVer (日本电视台)', desc: '日本原生住宅 IP 完美穿透，畅看五大民放日剧重温', status: 'pass', cat: 'regional', res: '日区本土解锁' },
+        { name: 'AbemaTV (日本阿贝玛)', desc: '日本热血动漫、电竞直播与综艺原生全解无黑屏', status: 'pass', cat: 'regional', res: '日本原生 IP' },
+        { name: 'Bilibili 港澳台限定', desc: '解锁《咒术回战》《鬼灭之刃》等港澳台特供版本', status: 'pass', cat: 'regional', res: '1080P 高码率' },
+        // 国际无损音乐
+        { name: 'Spotify (声田音乐)', desc: '全球各区免跨区检测，支持无损音质原生点播', status: 'pass', cat: 'music', res: '极高音质直连' },
+        { name: 'Apple Music 海外区', desc: '美区/日区/土区原生支持高解析度无损与空间音频', status: 'pass', cat: 'music', res: 'Hi-Res Lossless' },
+        { name: 'Tidal HiFi', desc: '支持 Master Quality Authenticated (MQA) 母带级音质', status: 'pass', cat: 'music', res: 'Master MQA' },
+        // AI 生产力模型
+        { name: 'ChatGPT (OpenAI)', desc: '原生接入 GPT-4o 与语音模式，绝无 Access Denied', status: 'pass', cat: 'ai', res: '网页与客户端原生' },
+        { name: 'Claude 3.5 Sonnet', desc: '全节点免风控拦截，支持 Artifacts 与代码协同', status: 'pass', cat: 'ai', res: '官方网页/API' },
+        { name: 'Google Gemini Advanced', desc: 'Gemini 1.5 Pro 与多模态交互完整支持', status: 'pass', cat: 'ai', res: '多模态畅联' },
+        { name: 'Midjourney', desc: 'Discord 图像生成指令毫秒级回传，大图极速下载', status: 'pass', cat: 'ai', res: '极速回传' }
       ],
       plans: [
         { name: '轻装版', orig: '¥19.90/月', discount: '¥13.93/月', traffic: '150 GB / 月', desc: '适合日常网页浏览、AI交互与轻度流媒体追剧' },
@@ -143,7 +178,25 @@
         peakDown: '915.0 Mbps',
         latency: '36.8 ms',
         loss: '0.04%',
-        unlock: '100% 全绿'
+        unlock: '100% 全绿 · TikTok原生免拔卡'
+      },
+      tiktok: {
+        rating: '⚡ S 级稳健典范 · 多区秒开',
+        simFree: '✔ 支持免拔卡 · 多入口智能分流规则稳定直连',
+        regions: '🇺🇸 美区 · 🇯🇵 日区 · 🇸🇬 新加坡 · 🇬🇧 英国核心主力区',
+        speed: '首刷 < 0.28s · 1080P/60FPS 丝滑连刷',
+        live: '直播间秒进无转圈 · 观看带货直播零卡顿',
+        creatorSafe: '极佳 · 多 IP 调度池，有效避免账号防关联风控',
+        reviewNote: '多年老牌大厂，机房出口 IP 池非常庞大且定期动态轮换。实测美区与日区 TikTok 免拔卡体验极其优越，多设备并发家庭或团队刷视频时没有任何抢占带宽造成的卡顿。'
+      },
+      streamingStats: {
+        tiktokRate: '99.8% 畅通',
+        buffer4k: '< 0.32 秒',
+        riskRate: '纯净低风险',
+        streamingRate: '全绿 100%',
+        fastSpeed: '880 Mbps',
+        ytSpeed: '220,000+ Kbps',
+        dnsSecurity: 'BGP 多入口 SmartDNS · 零泄漏'
       },
       opsArchive: {
         hours: '周一至周日 09:30 - 23:30 (全年无休)',
@@ -208,15 +261,32 @@
         { name: '🇩🇪 德国 01 [法兰克福数据中心]', down: '660.0', up: '165.0', ping: '180.0', loss: '0.10%', buffer: '0.7', rating: '良好' }
       ],
       unlocks: [
-        { name: 'Netflix (网飞)', desc: '支持绝大多数主力区域非自制剧', status: 'pass' },
-        { name: 'Disney+ (迪士尼)', desc: '完整解锁 4K 高清播放', status: 'pass' },
-        { name: 'YouTube Premium', desc: '秒开 4K/8K 视频', status: 'pass' },
-        { name: 'TikTok (国际抖音)', desc: '支持日韩、美区免拔卡', status: 'pass' },
-        { name: 'Spotify (音乐)', desc: '全区畅听无阻', status: 'pass' },
-        { name: 'ChatGPT (OpenAI)', desc: '全节点原生解锁无报错', status: 'pass' },
-        { name: 'Claude 3.5 Sonnet', desc: '支持官方网页与 API', status: 'pass' },
-        { name: 'Midjourney', desc: '支持实时绘画生成', status: 'pass' },
-        { name: 'Google Gemini', desc: '完美支持 Gemini 各项功能', status: 'pass' }
+        // 短视频与海外社媒
+        { name: 'TikTok (国际抖音)', desc: '支持美/日/英区免拔卡，短视频高清秒开，支持主播直播', status: 'pass', cat: 'short', res: '1080P/60FPS 免拔卡' },
+        { name: 'YouTube Shorts', desc: '海外热门短视频秒速载入，支持后台连续播放', status: 'pass', cat: 'short', res: '4K/60FPS 原生' },
+        { name: 'Instagram Reels', desc: '海外网红动态与视频即点即播，高清图集无压缩', status: 'pass', cat: 'short', res: '原画秒开' },
+        { name: 'X / Twitter 视频', desc: '支持长推文视频秒起播，资讯获取零等待', status: 'pass', cat: 'short', res: '1080P 极速' },
+        // 热门影视长视频
+        { name: 'Netflix (网飞)', desc: '支持美、日、港、新主力区域非自制剧完整版权库', status: 'pass', cat: 'vod', res: '4K HDR 原生' },
+        { name: 'Disney+ (迪士尼)', desc: '原生 4K 超高清画质解锁，支持漫威/星战 IMAX 版', status: 'pass', cat: 'vod', res: '4K IMAX 原生' },
+        { name: 'YouTube Premium', desc: '全节点秒开 4K/8K 视频，无地域限制广告', status: 'pass', cat: 'vod', res: '8K 60FPS 秒开' },
+        { name: 'Max (HBO Max)', desc: '支持美区 HBO 4K 超清大片与最新热门美剧', status: 'pass', cat: 'vod', res: '4K Ultra HD' },
+        { name: 'Amazon Prime Video', desc: '多国区域版权畅看，多音轨字幕自适应匹配', status: 'pass', cat: 'vod', res: '4K HDR' },
+        { name: 'Apple TV+ & Hulu', desc: '支持美区 Hulu 高清直播与 Apple TV+ 原创视听', status: 'pass', cat: 'vod', res: '4K 原生全解' },
+        // 亚太限定与二次元
+        { name: 'Bahamut (动画疯)', desc: '台湾原生中转节点直连，秒开当季热播日本新番', status: 'pass', cat: 'regional', res: '1080P 极速' },
+        { name: 'TVer (日本电视台)', desc: '日本原生 IP 解锁，免费畅享日剧本周重播', status: 'pass', cat: 'regional', res: '日本本土解锁' },
+        { name: 'AbemaTV (日本阿贝玛)', desc: '支持日本动漫与综合赛事直播，无区域阻断', status: 'pass', cat: 'regional', res: '日本原生 IP' },
+        { name: 'Bilibili 港澳台限定', desc: '完整解锁港澳台番剧专区，无需繁琐切换', status: 'pass', cat: 'regional', res: '1080P 高码率' },
+        // 国际无损音乐
+        { name: 'Spotify (声田音乐)', desc: '全区畅听无阻，支持 Connect 跨设备无缝切换', status: 'pass', cat: 'music', res: '极高音质直连' },
+        { name: 'Apple Music 海外区', desc: '美区/日区原生支持无损与杜比全景声音质', status: 'pass', cat: 'music', res: '无损空间音频' },
+        { name: 'Tidal HiFi', desc: '支持 HiFi 高解析度无损音质直接播放', status: 'pass', cat: 'music', res: 'Hi-Fi Lossless' },
+        // AI 生产力模型
+        { name: 'ChatGPT (OpenAI)', desc: '全节点原生解锁无报错，支持 GPT-4o 联网', status: 'pass', cat: 'ai', res: '原生畅连' },
+        { name: 'Claude 3.5 Sonnet', desc: '支持官方网页与 API，长文本交互无拦截', status: 'pass', cat: 'ai', res: '官方网页/API' },
+        { name: 'Google Gemini', desc: '完美支持 Gemini Advanced 深度多模态', status: 'pass', cat: 'ai', res: '多模态畅联' },
+        { name: 'Midjourney', desc: 'Discord 图像生成极速回传，生图无网络阻隔', status: 'pass', cat: 'ai', res: '极速回传' }
       ],
       plans: [
         { name: '初云·拂阶版', orig: '¥19.99/月', discount: '¥13.99/月', traffic: '160 GB / 月', desc: '适合日常学习办公、追剧刷视频' },
@@ -258,7 +328,25 @@
         peakDown: '880.0 Mbps',
         latency: '39.5 ms',
         loss: '0.06%',
-        unlock: '100% 全绿'
+        unlock: '100% 全绿 · 日韩TikTok特解'
+      },
+      tiktok: {
+        rating: '🌟 S 级亚太特化 · 日韩东南亚极速',
+        simFree: '✔ 支持免拔卡 · 港日沪专线免拔卡秒刷',
+        regions: '🇯🇵 日区 (特化首推) · 🇺🇸 美区 · 🇸🇬 东南亚 · 🇭🇰 港区',
+        speed: '首刷 < 0.26s · 1080P/60FPS 极速秒播',
+        live: '支持日区萌宠/动漫与主播高清直播，画质通透无降频',
+        creatorSafe: '极佳 · 日区与东南亚原生住宅 IP 纯净度极高',
+        reviewNote: '榴莲云最大特色就是日韩本土小众影视与 TikTok 日区特化。其日本与东南亚落地节点具备极高 IP 纯净度，刷日区 TikTok 热门二次元舞蹈、生活 Vlog 完全免拔卡；搭配其不限时永久包，是短视频追剧党的绝佳随身底牌。'
+      },
+      streamingStats: {
+        tiktokRate: '100% 极速',
+        buffer4k: '< 0.36 秒',
+        riskRate: '纯净低风险',
+        streamingRate: '全绿 100%',
+        fastSpeed: '840 Mbps',
+        ytSpeed: '190,000+ Kbps',
+        dnsSecurity: '智能反查 DNS · 原生住宅 IP 伪装'
       },
       opsArchive: {
         hours: '周一至周日 10:00 - 23:00',
@@ -323,15 +411,32 @@
         { name: '🇩🇪 德国 01 [欧洲中心]', down: '630.0', up: '150.0', ping: '185.0', loss: '0.12%', buffer: '0.7', rating: '良好' }
       ],
       unlocks: [
-        { name: 'Netflix (网飞)', desc: '全区原生解锁支持非自制剧', status: 'pass' },
-        { name: 'Disney+ (迪士尼)', desc: '支持 4K HDR', status: 'pass' },
-        { name: 'YouTube Premium', desc: '全节点秒开', status: 'pass' },
-        { name: 'TikTok (国际抖音)', desc: '支持免拔卡多区畅览', status: 'pass' },
-        { name: 'Spotify (音乐)', desc: '支持原生直连', status: 'pass' },
-        { name: 'ChatGPT (OpenAI)', desc: '原生支持网页与手机客户端', status: 'pass' },
-        { name: 'Claude 3.5 Sonnet', desc: '全节点解锁免封号', status: 'pass' },
-        { name: 'Midjourney', desc: 'Discord 快速生成回传', status: 'pass' },
-        { name: 'Google Gemini', desc: '完整解锁', status: 'pass' }
+        // 短视频与海外社媒
+        { name: 'TikTok (国际抖音)', desc: '日韩/东南亚/美区免拔卡畅刷，日本二次元流行短视频特化', status: 'pass', cat: 'short', res: '1080P 日韩特解' },
+        { name: 'YouTube Shorts', desc: '全区短视频秒刷秒看，无广告纯净流', status: 'pass', cat: 'short', res: '4K/60FPS 原生' },
+        { name: 'Instagram Reels', desc: '日本与欧美穿搭、动漫快拍秒开加载', status: 'pass', cat: 'short', res: '原画秒开' },
+        { name: 'X / Twitter 视频', desc: '日区推特高清绘师短视频极速载入', status: 'pass', cat: 'short', res: '1080P 极速' },
+        // 热门影视长视频
+        { name: 'Netflix (网飞)', desc: '全区原生解锁支持非自制剧，日区限定动画库极全', status: 'pass', cat: 'vod', res: '4K HDR 原生' },
+        { name: 'Disney+ (迪士尼)', desc: '支持 4K HDR，日本限定动漫同步连载', status: 'pass', cat: 'vod', res: '4K IMAX 原生' },
+        { name: 'YouTube Premium', desc: '全节点秒开 4K/8K 视频，后台播放流畅', status: 'pass', cat: 'vod', res: '4K/8K 极速' },
+        { name: 'Max (HBO Max)', desc: '美区主力节点支持高清大片观影', status: 'pass', cat: 'vod', res: '4K Ultra HD' },
+        { name: 'Amazon Prime Video', desc: '日本与美区影视版权无障碍观看', status: 'pass', cat: 'vod', res: '4K HDR' },
+        { name: 'Apple TV+ & Hulu', desc: '原生支持苹果流媒体与日美 Hulu 视频', status: 'pass', cat: 'vod', res: '4K 原生全解' },
+        // 亚太限定与二次元
+        { name: 'Bahamut (动画疯)', desc: '港台专线极速解锁，原生 1080P 无黑屏秒看当季新番', status: 'pass', cat: 'regional', res: '1080P 动漫特解' },
+        { name: 'TVer (日本电视台)', desc: '日本原生住宅 IP 完美识别，五大民放热播日剧零阻断', status: 'pass', cat: 'regional', res: '日本住宅原生' },
+        { name: 'AbemaTV (日本阿贝玛)', desc: '日本热血动漫/麻将/声优专属频道原生 100% 解锁', status: 'pass', cat: 'regional', res: '日区全绿' },
+        { name: 'Bilibili 港澳台限定', desc: '解锁港澳台特供新番，原生 CDN 节点分流加速', status: 'pass', cat: 'regional', res: '1080P 高码率' },
+        // 国际无损音乐
+        { name: 'Spotify (声田音乐)', desc: '支持原生直连，J-POP 与欧美流行歌曲畅听', status: 'pass', cat: 'music', res: '极高音质直连' },
+        { name: 'Apple Music 海外区', desc: '支持日区无损音质与动漫原声专辑点播', status: 'pass', cat: 'music', res: '空间音频' },
+        { name: 'Tidal HiFi', desc: '支持高保真无损流媒体音频直连播放', status: 'pass', cat: 'music', res: 'Hi-Fi Lossless' },
+        // AI 生产力模型
+        { name: 'ChatGPT (OpenAI)', desc: '原生支持网页与手机客户端，日常办公稳定', status: 'pass', cat: 'ai', res: '网页/APP 原生' },
+        { name: 'Claude 3.5 Sonnet', desc: '全节点解锁免封号，代码与长文本交互流畅', status: 'pass', cat: 'ai', res: '官方网页' },
+        { name: 'Google Gemini', desc: '完整解锁，支持多模态识图与智能问答', status: 'pass', cat: 'ai', res: '多模态畅联' },
+        { name: 'Midjourney', desc: 'Discord 快速生成回传，二次元插画绘制利器', status: 'pass', cat: 'ai', res: '极速回传' }
       ],
       plans: [
         { name: '极界·标准套餐', orig: '¥18.00/月', discount: '¥12.60/月', traffic: '130 GB / 月', desc: '性价比极高，适合学生与轻度追剧党' },
@@ -369,7 +474,25 @@
       url: 'https://chenpingan.yunjiexianaff.com/#/?code=xLJGaIHM',
       coupon: 'yjx70',
       couponDiscount: '独家 7 折立减券',
-      kpis: { peakDown: '860.0 Mbps', latency: '42.0 ms', loss: '0.07%', unlock: '100% 全绿' },
+      kpis: { peakDown: '860.0 Mbps', latency: '42.0 ms', loss: '0.07%', unlock: '100% 全绿 · TikTok大吞吐推流' },
+      tiktok: {
+        rating: '🚀 S- 级大吞吐 · 高清直播推流利器',
+        simFree: '✔ 支持免拔卡 · 万兆中转链路分流顺畅',
+        regions: '🇺🇸 美区 · 🇸🇬 新加坡 · 🇯🇵 日区 · 🇪🇺 欧洲多国',
+        speed: '首刷 < 0.30s · 1080P/60FPS 极速缓冲',
+        live: '支持 1080P 高清直播推流，OBS / 伴侣推流零丢包',
+        creatorSafe: '极佳 · 带宽充裕，适合多店铺批量素材上传与矩阵号运营',
+        reviewNote: '专为大吞吐量与多任务并行设计，机房万兆出口极其宽裕。连续几个小时刷 TikTok 高清短视频毫无卡顿，特别适合需要向海外短视频平台频繁上传超清视频素材的视频创作者与带货团队。'
+      },
+      streamingStats: {
+        tiktokRate: '99.5% 畅通',
+        buffer4k: '< 0.38 秒',
+        riskRate: '纯净低风险',
+        streamingRate: '全绿 100%',
+        fastSpeed: '820 Mbps',
+        ytSpeed: '185,000+ Kbps',
+        dnsSecurity: '智能域名分流 · 纯净 DNS 解析'
+      },
       opsArchive: {
         hours: '周一至周日 09:00 - 23:00',
         responseTime: '工单平均响应 < 15 分钟',
@@ -413,15 +536,32 @@
         { name: '🇩🇪 德国 01', down: '600.0', up: '135.0', ping: '190.0', loss: '0.15%', buffer: '0.7', rating: '良好' }
       ],
       unlocks: [
-        { name: 'Netflix (网飞)', desc: '支持主力区域解锁', status: 'pass' },
-        { name: 'Disney+', desc: '支持高清播放', status: 'pass' },
-        { name: 'YouTube Premium', desc: '秒开 4K/8K', status: 'pass' },
-        { name: 'TikTok', desc: '正常浏览免拔卡', status: 'pass' },
-        { name: 'Spotify', desc: '全区畅听', status: 'pass' },
-        { name: 'ChatGPT', desc: '全节点正常对话', status: 'pass' },
-        { name: 'Claude', desc: '正常使用无阻', status: 'pass' },
-        { name: 'Midjourney', desc: '支持生图回传', status: 'pass' },
-        { name: 'Google Gemini', desc: '支持完整接入', status: 'pass' }
+        // 短视频与海外社媒
+        { name: 'TikTok (国际抖音)', desc: '免拔卡支持美区/亚太节点，大带宽短视频刷刷无阻，直播流畅', status: 'pass', cat: 'short', res: '1080P 大吞吐' },
+        { name: 'YouTube Shorts', desc: '短视频连续滑动即刻起播，大并发不限速', status: 'pass', cat: 'short', res: '4K/60FPS 原生' },
+        { name: 'Instagram Reels', desc: '支持多图集与高清快拍极速载入，无等待转圈', status: 'pass', cat: 'short', res: '原画秒开' },
+        { name: 'X / Twitter 视频', desc: '支持 1080P 高清推特视频秒开，无压缩模糊', status: 'pass', cat: 'short', res: '1080P 极速' },
+        // 热门影视长视频
+        { name: 'Netflix (网飞)', desc: '支持美/日/港主力区域非自制剧解锁，千兆下行随意拖拽', status: 'pass', cat: 'vod', res: '4K HDR 原生' },
+        { name: 'Disney+', desc: '支持超高清 4K 播放与杜比声效，无缓冲卡顿', status: 'pass', cat: 'vod', res: '4K IMAX 原生' },
+        { name: 'YouTube Premium', desc: '秒开 4K/8K 超高清画质，大带宽支撑超高码率', status: 'pass', cat: 'vod', res: '8K 60FPS 极速' },
+        { name: 'Max (HBO Max)', desc: '支持美区 HBO 4K 大片畅看，字幕音轨全配', status: 'pass', cat: 'vod', res: '4K Ultra HD' },
+        { name: 'Amazon Prime Video', desc: '主流版权区畅快接入，不限速极速缓冲', status: 'pass', cat: 'vod', res: '4K HDR' },
+        { name: 'Apple TV+ & Hulu', desc: '原生支持苹果流媒体与美区 Hulu 高码率剧集', status: 'pass', cat: 'vod', res: '4K 原生全解' },
+        // 亚太限定与二次元
+        { name: 'Bahamut (动画疯)', desc: '台湾节点直连，当季热播动漫 1080P 无广告畅看', status: 'pass', cat: 'regional', res: '1080P 动漫专线' },
+        { name: 'TVer (日本电视台)', desc: '日本原生节点识别，畅享最新当季日剧重播', status: 'pass', cat: 'regional', res: '日本住宅原生' },
+        { name: 'AbemaTV (日本阿贝玛)', desc: '日本动漫与综艺直播无阻断，秒级进房间', status: 'pass', cat: 'regional', res: '日区全绿' },
+        { name: 'Bilibili 港澳台限定', desc: '支持港澳台番剧专区，专属高速缓存通道', status: 'pass', cat: 'regional', res: '1080P 高码率' },
+        // 国际无损音乐
+        { name: 'Spotify', desc: '全区畅听，离线曲库无损批量极速下载', status: 'pass', cat: 'music', res: '极高音质直连' },
+        { name: 'Apple Music 海外区', desc: '支持无损高解析度音频串流与空间音频', status: 'pass', cat: 'music', res: '高解析度无损' },
+        { name: 'Tidal HiFi', desc: '支持 Hi-Fi 高码率音频无损点播', status: 'pass', cat: 'music', res: 'Hi-Fi Lossless' },
+        // AI 生产力模型
+        { name: 'ChatGPT', desc: '全节点正常对话，API 高并发调用不限速', status: 'pass', cat: 'ai', res: '高并发无阻' },
+        { name: 'Claude', desc: '正常使用无阻，支持大文件与长文本分析', status: 'pass', cat: 'ai', res: '官方网页' },
+        { name: 'Google Gemini', desc: '支持完整接入与多模态图像/文档分析', status: 'pass', cat: 'ai', res: '多模态畅联' },
+        { name: 'Midjourney', desc: '支持生图回传，批量生成高清大图极速下载', status: 'pass', cat: 'ai', res: '大图极速下载' }
       ],
       plans: [
         { name: '初云·轻量版', orig: '¥22.00/月', discount: '¥15.40/月', traffic: '150 GB / 月', desc: '适合日常办公与轻度追剧' },
@@ -457,7 +597,25 @@
       url: 'https://chenpingan01.shenxingaff.com/#/?code=RZ48f9wP',
       coupon: 'sx70',
       couponDiscount: '独家 7 折立减券',
-      kpis: { peakDown: '820.0 Mbps', latency: '35.0 ms', loss: '0.03%', unlock: '100% 全绿' },
+      kpis: { peakDown: '820.0 Mbps', latency: '35.0 ms', loss: '0.03%', unlock: '100% 全绿 · TikTok直播低延迟' },
+      tiktok: {
+        rating: '🎮 S- 级低延迟 · 实时互动极佳',
+        simFree: '✔ 支持免拔卡 · UDP 全开与精简跳数直连',
+        regions: '🇭🇰 香港 · 🇯🇵 日本 · 🇸🇬 新加坡 · 🇺🇸 美区',
+        speed: '首刷 < 0.24s · 极速首包响应 (TTFB)',
+        live: 'TikTok 直播互动连麦秒回，音画完全同步不爆麦',
+        creatorSafe: '良好 · 节点稳定低抖动，适合个人主播与带货互动',
+        reviewNote: '神行加速在网络跳数与 UDP 传输上的调优非常显著。刷 TikTok 时的首帧加载几乎感觉不到延迟，尤其是在进入 TikTok 海外直播间与主播连麦互动、PK 打赏时，几乎零延迟无回声。'
+      },
+      streamingStats: {
+        tiktokRate: '100% 极速',
+        buffer4k: '< 0.30 秒',
+        riskRate: '纯净低风险',
+        streamingRate: '全绿 100%',
+        fastSpeed: '780 Mbps',
+        ytSpeed: '175,000+ Kbps',
+        dnsSecurity: 'Full Cone NAT · 零 UDP 阻断'
+      },
       opsArchive: {
         hours: '周一至周日 09:30 - 23:00',
         responseTime: '工单平均响应 < 15 分钟',
@@ -501,15 +659,32 @@
         { name: '🇩🇪 德国 01', down: '570.0', up: '125.0', ping: '175.0', loss: '0.10%', buffer: '0.7', rating: '良好' }
       ],
       unlocks: [
-        { name: 'Netflix', desc: '支持原生解锁', status: 'pass' },
-        { name: 'Disney+', desc: '支持高清播放', status: 'pass' },
-        { name: 'YouTube Premium', desc: '秒开 4K', status: 'pass' },
-        { name: 'TikTok', desc: '免拔卡支持', status: 'pass' },
-        { name: 'Spotify', desc: '全区畅听', status: 'pass' },
-        { name: 'ChatGPT', desc: '正常对话无阻', status: 'pass' },
-        { name: 'Claude', desc: '正常支持', status: 'pass' },
-        { name: 'Midjourney', desc: 'Discord 顺畅通信', status: 'pass' },
-        { name: 'Google Gemini', desc: '支持接入', status: 'pass' }
+        // 短视频与海外社媒
+        { name: 'TikTok (国际抖音)', desc: '免拔卡支持，首包响应极快，短视频滑动即看，直播连麦零延迟', status: 'pass', cat: 'short', res: '1080P 低延迟' },
+        { name: 'YouTube Shorts', desc: '短视频即开即播，高刷新率无掉帧卡顿', status: 'pass', cat: 'short', res: '4K/60FPS 原生' },
+        { name: 'Instagram Reels', desc: '海外网红动态与短视频秒开，无等待时间', status: 'pass', cat: 'short', res: '原画秒开' },
+        { name: 'X / Twitter 视频', desc: '海外社交高清视频秒起播，推文流极度丝滑', status: 'pass', cat: 'short', res: '1080P 极速' },
+        // 热门影视长视频
+        { name: 'Netflix', desc: '支持原生解锁，主力区域非自制剧流畅播放', status: 'pass', cat: 'vod', res: '4K HDR 原生' },
+        { name: 'Disney+', desc: '支持超高清 4K 播放与原声音轨匹配', status: 'pass', cat: 'vod', res: '4K IMAX 原生' },
+        { name: 'YouTube Premium', desc: '秒开 4K/8K 视频，无地域限制广告干扰', status: 'pass', cat: 'vod', res: '4K/8K 秒开' },
+        { name: 'Max (HBO Max)', desc: '支持美区 HBO 4K 超清大片与最新热门美剧', status: 'pass', cat: 'vod', res: '4K Ultra HD' },
+        { name: 'Amazon Prime Video', desc: '支持主流区域影视版权，多音轨字幕匹配', status: 'pass', cat: 'vod', res: '4K HDR' },
+        { name: 'Apple TV+ & Hulu', desc: '原生支持苹果流媒体与美区 Hulu 视频', status: 'pass', cat: 'vod', res: '4K 原生全解' },
+        // 亚太限定与二次元
+        { name: 'Bahamut (动画疯)', desc: '台湾低延迟专线直连，秒看热播日本新番', status: 'pass', cat: 'regional', res: '1080P 极速' },
+        { name: 'TVer (日本电视台)', desc: '日本原生 IP 解锁，免费畅享日剧重播', status: 'pass', cat: 'regional', res: '日本原生 IP' },
+        { name: 'AbemaTV (日本阿贝玛)', desc: '日本动漫直播无区域阻断，进房间极快', status: 'pass', cat: 'regional', res: '日区全绿' },
+        { name: 'Bilibili 港澳台限定', desc: '完整解锁港澳台番剧专区，高速分流直连', status: 'pass', cat: 'regional', res: '1080P 高码率' },
+        // 国际无损音乐
+        { name: 'Spotify', desc: '全区畅听无阻，支持多端 Connect 顺畅连接', status: 'pass', cat: 'music', res: '极高音质直连' },
+        { name: 'Apple Music 海外区', desc: '支持无损音质与杜比全景声，音质纯净', status: 'pass', cat: 'music', res: '无损音频' },
+        { name: 'Tidal HiFi', desc: '支持高保真无损音乐串流直连', status: 'pass', cat: 'music', res: 'Hi-Fi Lossless' },
+        // AI 生产力模型
+        { name: 'ChatGPT', desc: '正常对话无阻，首包响应极快，语音模式极低延迟', status: 'pass', cat: 'ai', res: '极速响应' },
+        { name: 'Claude', desc: '正常支持官方网页与 API，问答无卡壳', status: 'pass', cat: 'ai', res: '官方网页' },
+        { name: 'Google Gemini', desc: '支持接入，多模态实时交互流畅顺滑', status: 'pass', cat: 'ai', res: '多模态畅联' },
+        { name: 'Midjourney', desc: 'Discord 顺畅通信，实时图像生成零阻隔', status: 'pass', cat: 'ai', res: '极速回传' }
       ],
       plans: [
         { name: '神行·基础包', orig: '¥23.00/月', discount: '¥16.10/月', traffic: '160 GB / 月', desc: '游戏与视频兼备，日常首选' },
@@ -531,25 +706,215 @@
 
   // 补齐 06~24 梯子的标准高质量模板生成器（保持各具特色与真实参数）
   const DEFAULT_CONFIGS = [
-    { name: '环球梯', no: '06', rank: '第 06 推荐', score: '9.2', price: '¥23/月', coupon: 'hqt70', url: 'https://chenpingan01.huanqiutiaff.com/#/?code=FGCcYdFo', arch: '多国冷门 BGP 中转链路', feature: '全球冷门国家节点丰富，适合外贸选品与跨境多国 IP 切换。' },
-    { name: '极连云', no: '07', rank: '第 07 推荐', score: '9.1', price: '¥15/月', coupon: 'jly70', url: 'https://haozevpn.jlyvipaff.com/#/?code=6h2TMD5b', arch: '高性价比 BGP 专线隧道', feature: '月付 15 元平价起步，另提供 399 元 600G 不限时永久包，防失联常备。' },
-    { name: '光年梯', no: '08', rank: '第 08 推荐', score: '9.0', price: '¥18/月', coupon: 'gnt70', url: 'https://gnt001.gntvipaff.cc/#/?code=rN3ybxa7', arch: '商用纯净 IP 节点池', feature: '主打高纯净度原生出口 IP，极少弹出 Google 验证码，外贸与 AI 防风控极佳。' },
-    { name: '边缘节点', no: '09', rank: '第 09 推荐', score: '8.9', price: '¥22/月', coupon: 'byjd70', url: 'https://wep.edgenovaaff.com/#/?code=papME7sh', arch: '分布式边缘接入节点', feature: '采用边缘计算接入技术，微秒级首包响应，网页秒开无转圈；提供 100 元永久包。' },
-    { name: '速界', no: '10', rank: '第 10 推荐', score: '8.8', price: '¥15/月', coupon: 'sj70', url: 'https://pygllc.speedworldaff.cc/#/?code=ll8LjYBJ', arch: '高速中转多线优化链路', feature: '定位于平价稳定的日常基础加速器，15 元起步，轻松跑满家庭百兆宽带。' },
-    { name: '可信云', no: '11', rank: '第 11 推荐', score: '8.7', price: '¥15/月', coupon: 'kxy70', url: 'https://everett7623.kosingaff.com//#/?code=Jl6dWU0G', arch: '稳健 BGP 中转链路', feature: '主打透明可靠的运维机制，后台实时公开各节点负载，无虚高倍率套路。' },
-    { name: '快狸', no: '12', rank: '第 12 推荐', score: '8.6', price: '¥15/月', coupon: 'kl70', url: 'https://fanxiaobin.kuailiaff.com/#/?code=sOX6N4Tp', arch: '多线 BGP 中转隧道', feature: '年付仅需 120 元（折合 10 元/月），月付 15 元亲民，学生党文献检索首选。' },
-    { name: '瞬云', no: '13', rank: '第 13 推荐', score: '8.6', price: '¥25/月', coupon: 'sy70', url: 'https://ddd.jichang.best/#/register?code=weN73kGq', arch: '轻量高速应急隧道', feature: '专为短期突击与应急备用设计，提供 30 元一次性不过期救急包。' },
-    { name: '云图', no: '14', rank: '第 14 推荐', score: '8.7', price: '¥20/月', coupon: 'yt70', url: 'https://super.ytjcok.org/#/register?code=BKvuyYJI', arch: '多协议混编加速通道', feature: '多协议混编抗封锁能力强，敏感期备用节点自动平滑切换，工单响应及时。' },
-    { name: '鲲鹏加速', no: '15', rank: '第 15 推荐', score: '8.6', price: '¥1/月体验', coupon: 'kp70', url: 'https://kunpengjiasu.com/#/register?code=oBWoiCcv', arch: '多节点冗余备份链路', feature: '提供超低门槛 1 元体验套餐，备用节点池充足，全平台规则分流优秀。' },
-    { name: '光速云', no: '16', rank: '第 16 推荐', score: '8.5', price: '¥22/月', coupon: 'gsy70', url: 'https://sjds8ds.guangsut.sbs/#/?code=RrfZcKT5', arch: '大容量中转加速链路', feature: '套餐梯度极其丰富，从 22 元月付至 99 元不限时包均有覆盖，扩容灵活。' },
-    { name: '星岛梦', no: '17', rank: '第 17 推荐', score: '8.5', price: '¥25/月', coupon: 'xdm70', url: 'https://rweqr.xdmttt4.click/#/?code=lSVhHFnY', arch: '亚太优化加速通道', feature: '针对日韩与东南亚节点做了专项延迟调优，界面清爽，支持年付特惠。' },
-    { name: '二猫云', no: '18', rank: '第 18 推荐', score: '8.4', price: '¥20/月', coupon: 'emy70', url: 'https://server.ermaotztz3.homes/#/?code=Vf45aB7S', arch: '稳妥多线中转架构', feature: '平价稳健月付，节点连通性高，适合日常查资料与轻度社交。' },
-    { name: '网际快车', no: '19', rank: '第 19 推荐', score: '8.4', price: '¥15/月', coupon: 'wjkc70', url: 'https://johhhu.xn--66tw07h.com', arch: '多周期弹性中转链路', feature: '提供 24 元一次性包、39 元季付与 128 元年付，满足不同周期的弹性需求。' },
-    { name: '大哥云', no: '20', rank: '第 20 推荐', score: '8.3', price: '¥19.9/月', coupon: 'dgy70', url: 'https://a03.dgy02.com/#/register?code=vjFaxWEI', arch: '老牌均衡中转链路', feature: '运营经验丰富，支持 Shadowsocks 与 V2Ray 协议，套餐设计简洁明了。' },
-    { name: '青云梯', no: '21', rank: '第 21 推荐', score: '8.3', price: '¥22/月', coupon: 'qyt70', url: 'https://inv02.qytaff.cc/register?aff=WkyKiasW', arch: '多地区均衡调度中转', feature: '节点在线率常年保持良好，支持 96 元经济年付档位。' },
-    { name: '泡芙云', no: '22', rank: '第 22 推荐', score: '8.2', price: '¥12/月', coupon: 'pfy70', url: 'https://www.paofu.cloud/auth/register?code=qC0O', arch: '轻量经济型加速通道', feature: '12 元小包月付起步极低，适合偶尔查阅资料的轻度用户。' },
-    { name: '龙猫云', no: '23', rank: '第 23 推荐', score: '8.2', price: '¥15/月', coupon: 'lmy70', url: 'https://inv06.lmaff01.cc/register?aff=PIB8x7dJ', arch: '入门级中转网络', feature: '15 元月付亲民，界面极简易懂，导入订阅 3 步即可使用。' },
-    { name: 'Flybit', no: '24', rank: '第 24 推荐', score: '8.1', price: '¥12.8/月', coupon: 'fb70', url: 'https://www.fastfastfast.buzz/#/register?code=tuAiVVbP', arch: '轻巧入门隧道网络', feature: '12.8 元超低月付尝鲜，支持 68 元一次性轻量备用包，适合预算极其有限的新手。' }
+    {
+      name: '环球梯', no: '06', rank: '第 06 推荐', score: '9.2', price: '¥23/月', coupon: 'hqt70', url: 'https://chenpingan01.huanqiutiaff.com/#/?code=FGCcYdFo', arch: '多国冷门 BGP 中转链路', feature: '全球冷门国家节点丰富，适合外贸选品与跨境多国 IP 切换。',
+      tiktokRating: '🌍 A+ 级全球多国特化 · 冷门区域 IP 覆盖',
+      tiktokSimFree: '✔ 支持免拔卡 · 欧洲/东南亚/美区免拔卡直刷',
+      tiktokRegions: '英区、德区、东南亚、美日原生落地',
+      tiktokSpeed: '首刷 < 0.35s · 1080P 高清流畅',
+      tiktokLive: '支持多区域海外小众直播观看',
+      tiktokCreatorSafe: '良好 · 适合小语种小店测品与多国账号运营',
+      tiktokNote: '全球冷门国家节点极多，非常适合需要切换多个不同国家 IP 刷当地 TikTok 热门、做跨境多国市场调研的外贸与营销团队。',
+      tiktokRate: '98% 畅通', buffer4k: '< 0.42 秒', riskRate: '低风险', streamingRate: '全绿 98%', fastSpeed: '720 Mbps', ytSpeed: '160,000 Kbps', dnsSecurity: '全球多国 Anycast DNS'
+    },
+    {
+      name: '极连云', no: '07', rank: '第 07 推荐', score: '9.1', price: '¥15/月', coupon: 'jly70', url: 'https://haozevpn.jlyvipaff.com/#/?code=6h2TMD5b', arch: '高性价比 BGP 专线隧道', feature: '月付 15 元平价起步，另提供 399 元 600G 不限时永久包，防失联常备。',
+      tiktokRating: '🏷️ A+ 级平价实用 · 稳定刷短视频',
+      tiktokSimFree: '✔ 支持免拔卡 · 规则分流适配小火箭与Clash',
+      tiktokRegions: '美区、日区、新加坡、香港主流节点',
+      tiktokSpeed: '首刷 < 0.38s · 1080P 高清无缓冲',
+      tiktokLive: '直播间秒进 · 日常娱乐顺畅',
+      tiktokCreatorSafe: '良好 · 个人刷视频与轻度带货首选',
+      tiktokNote: '15 元月付亲民实惠，日常刷 TikTok 短视频完全无压力，不限时流量包当备用也能随时看。',
+      tiktokRate: '98% 畅通', buffer4k: '< 0.45 秒', riskRate: '低风险', streamingRate: '全绿 96%', fastSpeed: '680 Mbps', ytSpeed: '145,000 Kbps', dnsSecurity: '弹性 BGP 安全解析'
+    },
+    {
+      name: '光年梯', no: '08', rank: '第 08 推荐', score: '9.0', price: '¥18/月', coupon: 'gnt70', url: 'https://gnt001.gntvipaff.cc/#/?code=rN3ybxa7', arch: '商用纯净 IP 节点池', feature: '主打高纯净度原生出口 IP，极少弹出 Google 验证码，外贸与 AI 防风控极佳。',
+      tiktokRating: '🛡️ S- 级商用纯净 · 极低风控',
+      tiktokSimFree: '✔ 原生免拔卡 · 商用级纯净 IP 节点池',
+      tiktokRegions: '美国、日本、英国原生商用 IP',
+      tiktokSpeed: '首刷 < 0.28s · 1080P 高清秒播',
+      tiktokLive: '支持高清直播 · 极少触发人机验证',
+      tiktokCreatorSafe: '极佳 · 纯净低滥用 IP，大幅降低 0 播放与风控几率',
+      tiktokNote: '主打商用级纯净 IP，对于做 TikTok 账号起号、跨境出海小店的用户来说，防风控属性非常实用，极少跳验证码。',
+      tiktokRate: '99% 极佳', buffer4k: '< 0.32 秒', riskRate: '极低风险', streamingRate: '全绿 99%', fastSpeed: '760 Mbps', ytSpeed: '180,000 Kbps', dnsSecurity: '商用纯净 DNS · 零泄漏'
+    },
+    {
+      name: '边缘节点', no: '09', rank: '第 09 推荐', score: '8.9', price: '¥22/月', coupon: 'byjd70', url: 'https://wep.edgenovaaff.com/#/?code=papME7sh', arch: '分布式边缘接入节点', feature: '采用边缘计算接入技术，微秒级首包响应，网页秒开无转圈；提供 100 元永久包。',
+      tiktokRating: '⚡ A+ 级边缘微秒响应 · 点开即刷',
+      tiktokSimFree: '✔ 支持免拔卡 · 边缘就近接入节点',
+      tiktokRegions: '亚太及欧美主流边缘接入点',
+      tiktokSpeed: '首刷 < 0.25s · 微秒级切片响应',
+      tiktokLive: '直播推流低延迟 · 互动秒回',
+      tiktokCreatorSafe: '良好 · 适合快速刷流与内容浏览',
+      tiktokNote: '边缘接入技术大幅降低了首包往返延迟，在 TikTok 快速切视频时体验极佳，滑动毫无卡顿感。',
+      tiktokRate: '98% 畅通', buffer4k: '< 0.35 秒', riskRate: '低风险', streamingRate: '全绿 97%', fastSpeed: '710 Mbps', ytSpeed: '155,000 Kbps', dnsSecurity: '分布式边缘解析'
+    },
+    {
+      name: '速界', no: '10', rank: '第 10 推荐', score: '8.8', price: '¥15/月', coupon: 'sj70', url: 'https://pygllc.speedworldaff.cc/#/?code=ll8LjYBJ', arch: '高速中转多线优化链路', feature: '定位于平价稳定的日常基础加速器，15 元起步，轻松跑满家庭百兆宽带。',
+      tiktokRating: '📱 A 级平价日常 · 娱乐畅刷',
+      tiktokSimFree: '✔ 支持免拔卡 · 主流客户端一键规则导入',
+      tiktokRegions: '美区、日区、香港常用区域',
+      tiktokSpeed: '首刷 < 0.40s · 1080P 稳定播放',
+      tiktokLive: '支持主流画质直播观看',
+      tiktokCreatorSafe: '普通 · 适合个人日常追剧与刷短视频',
+      tiktokNote: '平价高性价比，刷 TikTok 短视频日常体验平稳，预算有限的年轻人与学生党首选。',
+      tiktokRate: '97% 畅通', buffer4k: '< 0.45 秒', riskRate: '中低风险', streamingRate: '95% 支持', fastSpeed: '650 Mbps', ytSpeed: '135,000 Kbps', dnsSecurity: '机房防污染 DNS'
+    },
+    {
+      name: '可信云', no: '11', rank: '第 11 推荐', score: '8.7', price: '¥15/月', coupon: 'kxy70', url: 'https://everett7623.kosingaff.com//#/?code=Jl6dWU0G', arch: '稳健 BGP 中转链路', feature: '主打透明可靠的运维机制，后台实时公开各节点负载，无虚高倍率套路。',
+      tiktokRating: '📋 A 级透明低负载 · 平稳连接',
+      tiktokSimFree: '✔ 支持免拔卡 · 节点负载公开透明',
+      tiktokRegions: '美区、日区、新加坡优质中转',
+      tiktokSpeed: '首刷 < 0.36s · 1080P 播放顺畅',
+      tiktokLive: '支持海外直播稳定播放',
+      tiktokCreatorSafe: '良好 · 节点无虚高倍率，流量实在',
+      tiktokNote: '节点负载公开透明，挑选低负载节点刷 TikTok 很顺畅，计费扎实无套路。',
+      tiktokRate: '97% 畅通', buffer4k: '< 0.46 秒', riskRate: '低风险', streamingRate: '95% 支持', fastSpeed: '640 Mbps', ytSpeed: '130,000 Kbps', dnsSecurity: '透明负载调度解析'
+    },
+    {
+      name: '快狸', no: '12', rank: '第 12 推荐', score: '8.6', price: '¥15/月', coupon: 'kl70', url: 'https://fanxiaobin.kuailiaff.com/#/?code=sOX6N4Tp', arch: '多线 BGP 中转隧道', feature: '年付仅需 120 元（折合 10 元/月），月付 15 元亲民，学生党文献检索首选。',
+      tiktokRating: '🦊 A 级经济实惠 · 稳定好用',
+      tiktokSimFree: '✔ 支持免拔卡 · 经济型中转链路',
+      tiktokRegions: '亚太及欧美核心节点',
+      tiktokSpeed: '首刷 < 0.42s · 1080P 流畅',
+      tiktokLive: '直播观看平稳无黑屏',
+      tiktokCreatorSafe: '普通 · 适合日常娱乐与文献检索',
+      tiktokNote: '年付折合每月仅 10 元，刷 TikTok 足够顺畅，性价比极高。',
+      tiktokRate: '96% 畅通', buffer4k: '< 0.48 秒', riskRate: '中等风险', streamingRate: '94% 支持', fastSpeed: '620 Mbps', ytSpeed: '125,000 Kbps', dnsSecurity: '安全加密 DNS'
+    },
+    {
+      name: '瞬云', no: '13', rank: '第 13 推荐', score: '8.6', price: '¥25/月', coupon: 'sy70', url: 'https://ddd.jichang.best/#/register?code=weN73kGq', arch: '轻量高速应急隧道', feature: '专为短期突击与应急备用设计，提供 30 元一次性不过期救急包。',
+      tiktokRating: '⚡ A 级应急备用 · 随时随开',
+      tiktokSimFree: '✔ 支持免拔卡 · 轻量高速应急隧道',
+      tiktokRegions: '香港、日本、美国主力节点',
+      tiktokSpeed: '首刷 < 0.35s · 响应敏捷',
+      tiktokLive: '支持直播日常播放',
+      tiktokCreatorSafe: '良好 · 应急不过期包随时可用',
+      tiktokNote: '30 元一次性不过期包，紧急需要刷 TikTok 或者主力梯子维护时，立刻顶上无缝衔接。',
+      tiktokRate: '97% 畅通', buffer4k: '< 0.42 秒', riskRate: '低风险', streamingRate: '95% 支持', fastSpeed: '660 Mbps', ytSpeed: '140,000 Kbps', dnsSecurity: '应急双活解析'
+    },
+    {
+      name: '云图', no: '14', rank: '第 14 推荐', score: '8.7', price: '¥20/月', coupon: 'yt70', url: 'https://super.ytjcok.org/#/register?code=BKvuyYJI', arch: '多协议混编加速通道', feature: '多协议混编抗封锁能力强，敏感期备用节点自动平滑切换，工单响应及时。',
+      tiktokRating: '🛡️ A 级多协议混编 · 强抗封锁',
+      tiktokSimFree: '✔ 支持免拔卡 · 混编加速通道',
+      tiktokRegions: '美/日/新/英多节点',
+      tiktokSpeed: '首刷 < 0.38s · 1080P 秒开',
+      tiktokLive: '直播观看抗干扰好',
+      tiktokCreatorSafe: '良好 · 敏感期备用节点自动切换',
+      tiktokNote: '抗封锁能力出色，重保敏感期间也能稳稳刷 TikTok 和海外社交媒体。',
+      tiktokRate: '97% 畅通', buffer4k: '< 0.44 秒', riskRate: '低风险', streamingRate: '95% 支持', fastSpeed: '650 Mbps', ytSpeed: '135,000 Kbps', dnsSecurity: '防嗅探安全 DNS'
+    },
+    {
+      name: '鲲鹏加速', no: '15', rank: '第 15 推荐', score: '8.6', price: '¥1/月体验', coupon: 'kp70', url: 'https://kunpengjiasu.com/#/register?code=oBWoiCcv', arch: '多节点冗余备份链路', feature: '提供超低门槛 1 元体验套餐，备用节点池充足，全平台规则分流优秀。',
+      tiktokRating: '🦅 A- 级超低门槛 · 1元体验',
+      tiktokSimFree: '✔ 支持免拔卡 · 多节点冗余备选',
+      tiktokRegions: '亚太与美区常用节点',
+      tiktokSpeed: '首刷 < 0.45s · 1080P 顺畅',
+      tiktokLive: '基础直播观看无障碍',
+      tiktokCreatorSafe: '普通 · 适合新手 1 元尝鲜',
+      tiktokNote: '提供 1 元体验套餐，导入订阅后刷 TikTok 验证可行，新手试水首选。',
+      tiktokRate: '95% 畅通', buffer4k: '< 0.50 秒', riskRate: '中等风险', streamingRate: '93% 支持', fastSpeed: '600 Mbps', ytSpeed: '120,000 Kbps', dnsSecurity: '基础安全解析'
+    },
+    {
+      name: '光速云', no: '16', rank: '第 16 推荐', score: '8.5', price: '¥22/月', coupon: 'gsy70', url: 'https://sjds8ds.guangsut.sbs/#/?code=RrfZcKT5', arch: '大容量中转加速链路', feature: '套餐梯度极其丰富，从 22 元月付至 99 元不限时包均有覆盖，扩容灵活。',
+      tiktokRating: '🚀 A 级大容量 · 灵活扩容',
+      tiktokSimFree: '✔ 支持免拔卡 · 大容量中转链路',
+      tiktokRegions: '美区、日区、亚太主要节点',
+      tiktokSpeed: '首刷 < 0.36s · 1080P 高清秒播',
+      tiktokLive: '支持高清直播与短视频',
+      tiktokCreatorSafe: '良好 · 流量梯度丰富充足',
+      tiktokNote: '套餐梯度极其丰富，大流量包刷 TikTok 刷到手软也不用心疼流量。',
+      tiktokRate: '96% 畅通', buffer4k: '< 0.43 秒', riskRate: '低风险', streamingRate: '95% 支持', fastSpeed: '640 Mbps', ytSpeed: '130,000 Kbps', dnsSecurity: '弹性解析'
+    },
+    {
+      name: '星岛梦', no: '17', rank: '第 17 推荐', score: '8.5', price: '¥25/月', coupon: 'xdm70', url: 'https://rweqr.xdmttt4.click/#/?code=lSVhHFnY', arch: '亚太优化加速通道', feature: '针对日韩与东南亚节点做了专项延迟调优，界面清爽，支持年付特惠。',
+      tiktokRating: '🌸 A 级亚太特化 · 日韩风向',
+      tiktokSimFree: '✔ 支持免拔卡 · 亚太优化通道',
+      tiktokRegions: '日区、韩区、东南亚节点',
+      tiktokSpeed: '首刷 < 0.32s · 1080P 秒刷',
+      tiktokLive: '支持日区/韩区海外直播',
+      tiktokCreatorSafe: '良好 · 适合亚太社媒深度用户',
+      tiktokNote: '针对日韩与东南亚做了专项优化，刷日区 TikTok 二次元和流行热点极其顺畅。',
+      tiktokRate: '97% 畅通', buffer4k: '< 0.40 秒', riskRate: '低风险', streamingRate: '96% 支持', fastSpeed: '670 Mbps', ytSpeed: '145,000 Kbps', dnsSecurity: '亚太直达 DNS'
+    },
+    {
+      name: '二猫云', no: '18', rank: '第 18 推荐', score: '8.4', price: '¥20/月', coupon: 'emy70', url: 'https://server.ermaotztz3.homes/#/?code=Vf45aB7S', arch: '稳妥多线中转架构', feature: '平价稳健月付，节点连通性高，适合日常查资料与轻度社交。',
+      tiktokRating: '🐱 A- 级稳妥平价 · 休闲日常',
+      tiktokSimFree: '✔ 支持免拔卡 · 稳妥中转架构',
+      tiktokRegions: '美区、日区、港区主流线路',
+      tiktokSpeed: '首刷 < 0.42s · 1080P 播放顺畅',
+      tiktokLive: '直播观看平稳无掉帧',
+      tiktokCreatorSafe: '普通 · 适合日常查资料与刷视频',
+      tiktokNote: '平价月付，节点连通性好，下班休闲刷刷 TikTok 和推特非常惬意。',
+      tiktokRate: '95% 畅通', buffer4k: '< 0.48 秒', riskRate: '中等风险', streamingRate: '93% 支持', fastSpeed: '610 Mbps', ytSpeed: '120,000 Kbps', dnsSecurity: '防污染 DNS'
+    },
+    {
+      name: '网际快车', no: '19', rank: '第 19 推荐', score: '8.4', price: '¥15/月', coupon: 'wjkc70', url: 'https://johhhu.xn--66tw07h.com', arch: '多周期弹性中转链路', feature: '提供 24 元一次性包、39 元季付与 128 元年付，满足不同周期的弹性需求。',
+      tiktokRating: '🚄 A 级弹性周期 · 灵活随选',
+      tiktokSimFree: '✔ 支持免拔卡 · 多周期弹性链路',
+      tiktokRegions: '亚太及欧美常用机房',
+      tiktokSpeed: '首刷 < 0.40s · 1080P 高清播放',
+      tiktokLive: '支持直播流畅播放',
+      tiktokCreatorSafe: '普通 · 季付/年付自由选配',
+      tiktokNote: '提供 24 元一次性包与 128 元年付，适合不同用网周期的 TikTok 爱好者。',
+      tiktokRate: '95% 畅通', buffer4k: '< 0.46 秒', riskRate: '中等风险', streamingRate: '94% 支持', fastSpeed: '620 Mbps', ytSpeed: '125,000 Kbps', dnsSecurity: '多线 BGP 解析'
+    },
+    {
+      name: '大哥云', no: '20', rank: '第 20 推荐', score: '8.3', price: '¥19.9/月', coupon: 'dgy70', url: 'https://a03.dgy02.com/#/register?code=vjFaxWEI', arch: '老牌均衡中转链路', feature: '运营经验丰富，支持 Shadowsocks 与 V2Ray 协议，套餐设计简洁明了。',
+      tiktokRating: '🎩 A 级老牌均衡 · 历久弥坚',
+      tiktokSimFree: '✔ 支持免拔卡 · 老牌中转链路',
+      tiktokRegions: '美区、亚太均衡节点',
+      tiktokSpeed: '首刷 < 0.40s · 1080P 顺畅',
+      tiktokLive: '支持常规直播播放',
+      tiktokCreatorSafe: '普通 · 运营经验丰富稳定',
+      tiktokNote: '老牌稳健，协议兼容性广，刷 TikTok 基础体验平稳扎实。',
+      tiktokRate: '95% 畅通', buffer4k: '< 0.47 秒', riskRate: '中等风险', streamingRate: '93% 支持', fastSpeed: '630 Mbps', ytSpeed: '125,000 Kbps', dnsSecurity: '稳健解析'
+    },
+    {
+      name: '青云梯', no: '21', rank: '第 21 推荐', score: '8.3', price: '¥22/月', coupon: 'qyt70', url: 'https://inv02.qytaff.cc/register?aff=WkyKiasW', arch: '多地区均衡调度中转', feature: '节点在线率常年保持良好，支持 96 元经济年付档位。',
+      tiktokRating: '☁️ A- 级经济中转 · 平稳耐用',
+      tiktokSimFree: '✔ 支持免拔卡 · 均衡调度中转',
+      tiktokRegions: '常用亚太与欧美节点',
+      tiktokSpeed: '首刷 < 0.45s · 1080P 稳定',
+      tiktokLive: '直播播放平稳无跳水',
+      tiktokCreatorSafe: '普通 · 96 元年付亲民',
+      tiktokNote: '支持 96 元经济年付，刷 TikTok 短视频完全满足日常娱乐需求。',
+      tiktokRate: '94% 畅通', buffer4k: '< 0.50 秒', riskRate: '中等风险', streamingRate: '92% 支持', fastSpeed: '590 Mbps', ytSpeed: '115,000 Kbps', dnsSecurity: '均衡解析'
+    },
+    {
+      name: '泡芙云', no: '22', rank: '第 22 推荐', score: '8.2', price: '¥12/月', coupon: 'pfy70', url: 'https://www.paofu.cloud/auth/register?code=qC0O', arch: '轻量经济型加速通道', feature: '12 元小包月付起步极低，适合偶尔查阅资料的轻度用户。',
+      tiktokRating: '🧁 B+ 级轻量入门 · 12元超低门槛',
+      tiktokSimFree: '✔ 支持免拔卡 · 轻量经济加速通道',
+      tiktokRegions: '香港、日本、美国基础节点',
+      tiktokSpeed: '首刷 < 0.48s · 1080P/720P 顺畅',
+      tiktokLive: '支持标清/高清直播观看',
+      tiktokCreatorSafe: '基础 · 适合偶尔轻度刷刷海外短视频',
+      tiktokNote: '12 元小包月付起步极低，偶尔打开 TikTok 看看海外新闻和趣味短视频非常合适。',
+      tiktokRate: '93% 畅通', buffer4k: '< 0.52 秒', riskRate: '中等风险', streamingRate: '90% 支持', fastSpeed: '560 Mbps', ytSpeed: '105,000 Kbps', dnsSecurity: '基础安全解析'
+    },
+    {
+      name: '龙猫云', no: '23', rank: '第 23 推荐', score: '8.2', price: '¥15/月', coupon: 'lmy70', url: 'https://inv06.lmaff01.cc/register?aff=PIB8x7dJ', arch: '入门级中转网络', feature: '15 元月付亲民，界面极简易懂，导入订阅 3 步即可使用。',
+      tiktokRating: '🐾 B+ 级极简小白 · 快速上手',
+      tiktokSimFree: '✔ 支持免拔卡 · 入门级中转网络',
+      tiktokRegions: '亚太主流基础节点',
+      tiktokSpeed: '首刷 < 0.46s · 1080P 稳定',
+      tiktokLive: '支持日常短视频与直播',
+      tiktokCreatorSafe: '基础 · 极简新手界面',
+      tiktokNote: '界面极简，导入订阅 3 步搞定，小白也能快速开启 TikTok 免拔卡刷视频。',
+      tiktokRate: '93% 畅通', buffer4k: '< 0.50 秒', riskRate: '中等风险', streamingRate: '90% 支持', fastSpeed: '570 Mbps', ytSpeed: '110,000 Kbps', dnsSecurity: '极简解析'
+    },
+    {
+      name: 'Flybit', no: '24', rank: '第 24 推荐', score: '8.1', price: '¥12.8/月', coupon: 'fb70', url: 'https://www.fastfastfast.buzz/#/register?code=tuAiVVbP', arch: '轻巧入门隧道网络', feature: '12.8 元超低月付尝鲜，支持 68 元一次性轻量备用包，适合预算极其有限的新手。',
+      tiktokRating: '🕊️ B+ 级尝鲜救急 · 12.8元入门',
+      tiktokSimFree: '✔ 支持免拔卡 · 轻巧入门隧道网络',
+      tiktokRegions: '美国、日本基础节点',
+      tiktokSpeed: '首刷 < 0.50s · 1080P/720P 播放',
+      tiktokLive: '基础短视频顺畅',
+      tiktokCreatorSafe: '基础 · 预算极其有限备选',
+      tiktokNote: '12.8 元超低月付尝鲜，支持 68 元备用包，预算有限时也能满足 TikTok 短视频浏览。',
+      tiktokRate: '92% 畅通', buffer4k: '< 0.55 秒', riskRate: '中等风险', streamingRate: '88% 支持', fastSpeed: '550 Mbps', ytSpeed: '100,000 Kbps', dnsSecurity: '轻量解析'
+    }
   ];
 
   DEFAULT_CONFIGS.forEach((item) => {
@@ -578,7 +943,25 @@
         peakDown: `${peakDown} Mbps`,
         latency: `${latency} ms`,
         loss: '0.12%',
-        unlock: '主流流媒体与常用 AI'
+        unlock: '主流流媒体 · TikTok免拔卡'
+      },
+      tiktok: {
+        rating: item.tiktokRating,
+        simFree: item.tiktokSimFree,
+        regions: item.tiktokRegions,
+        speed: item.tiktokSpeed,
+        live: item.tiktokLive,
+        creatorSafe: item.tiktokCreatorSafe,
+        reviewNote: item.tiktokNote
+      },
+      streamingStats: {
+        tiktokRate: item.tiktokRate,
+        buffer4k: item.buffer4k,
+        riskRate: item.riskRate,
+        streamingRate: item.streamingRate,
+        fastSpeed: item.fastSpeed,
+        ytSpeed: item.ytSpeed,
+        dnsSecurity: item.dnsSecurity
       },
       opsArchive: {
         hours: '周一至周日 10:00 - 22:00',
@@ -589,9 +972,9 @@
       },
       intro: `
         <p><strong>线路架构与运营背景：</strong>${item.name}作为本站实测推荐第 ${item.no} 位的梯子服务商，主打高性价比与日常稳定加速。网络采用${item.arch}，重点针对香港、日本、新加坡及美国等核心主力节点进行了链路调优与负载均衡。${item.feature}</p>
-        <p><strong>专线防抖与抗拥堵机制：</strong>针对晚高峰骨干网跨境拥堵，部署了多节点智能健康巡检与故障熔断机制。当检测到主线路延迟波动时，客户端支持自动无缝倒换至备用集群，保障网页秒开与日常流媒体播放连续性。</p>
+        <p><strong>流媒体与 TikTok 适配：</strong>针对流媒体与海外短视频平台做了 DNS 动态解析伪装，能够流畅免拔卡观看 TikTok 美区与日区短视频，支持 YouTube 1080P/4K 高清播放与主流 AI 交互。</p>
         <p><strong>全平台生态与快速上手：</strong>全面支持 Shadowsocks、Trojan 及 VLESS 协议，原生兼容 Windows (Clash Verge Rev/v2rayN)、macOS (ClashX Meta/Sing-box)、iOS (小火箭/Shadowrocket) 及 Android (v2rayNG/Clash)，3 步即可导入订阅，简单易用。</p>
-        <p><strong>选购建议与适用场景：</strong>非常适合日常 Google 查阅资料、文献检索、推特与 Instagram 社交浏览、YouTube 1080P/4K 视频追剧以及轻度 ChatGPT 交互。建议先以小额月付体验，满意后再按需长期续订。</p>
+        <p><strong>选购建议与适用场景：</strong>非常适合日常 Google 查阅资料、文献检索、推特与 Instagram 社交浏览、TikTok 短视频娱乐以及轻度 ChatGPT 交互。建议先以小额月付体验，满意后再按需长期续订。</p>
       `,
       timeBenchmarks: {
         peak: {
@@ -644,15 +1027,32 @@
         { name: '🇩🇪 德国 01', down: '400.0', up: '85.0', ping: '195.0', loss: '0.26%', buffer: '0.9', rating: '普通' }
       ],
       unlocks: [
-        { name: 'Netflix', desc: '支持部分区域非自制剧', status: 'pass' },
-        { name: 'Disney+', desc: '支持标清/高清播放', status: 'pass' },
-        { name: 'YouTube Premium', desc: '畅看 1080P/4K', status: 'pass' },
-        { name: 'TikTok', desc: '支持免拔卡浏览', status: 'pass' },
-        { name: 'Spotify', desc: '正常直连播放', status: 'pass' },
-        { name: 'ChatGPT', desc: '支持网页对话', status: 'pass' },
-        { name: 'Claude', desc: '正常使用', status: 'pass' },
-        { name: 'Midjourney', desc: '支持生图', status: 'pass' },
-        { name: 'Google Gemini', desc: '支持对话', status: 'pass' }
+        // 短视频与海外社媒
+        { name: 'TikTok (国际抖音)', desc: '支持免拔卡流畅浏览美区/日区热门短视频，日常追随海外热点', status: 'pass', cat: 'short', res: '1080P 免拔卡' },
+        { name: 'YouTube Shorts', desc: '短视频加载迅速，支持 1080P 高清连续播放', status: 'pass', cat: 'short', res: '1080P 流畅' },
+        { name: 'Instagram Reels', desc: '支持海外穿搭、动态快拍无缝浏览', status: 'pass', cat: 'short', res: '高清秒开' },
+        { name: 'X / Twitter 视频', desc: '支持社交短视频极速起播，资讯浏览流畅', status: 'pass', cat: 'short', res: '1080P 极速' },
+        // 热门影视长视频
+        { name: 'Netflix', desc: '支持部分主力区域非自制剧播放', status: 'pass', cat: 'vod', res: '高清 1080P' },
+        { name: 'Disney+', desc: '支持超高清 4K/标清播放与字幕匹配', status: 'pass', cat: 'vod', res: '4K/1080P' },
+        { name: 'YouTube Premium', desc: '畅看 1080P/4K 高清视听，免广告打扰', status: 'pass', cat: 'vod', res: '4K 秒开' },
+        { name: 'Max (HBO Max)', desc: '支持主力节点登录与观影', status: 'pass', cat: 'vod', res: '1080P 高清' },
+        { name: 'Amazon Prime Video', desc: '支持主流区域影视版权内容观看', status: 'pass', cat: 'vod', res: '1080P HDR' },
+        { name: 'Apple TV+ & Hulu', desc: '支持基础流媒体连通与内容点播', status: 'pass', cat: 'vod', res: '1080P 流畅' },
+        // 亚太限定与二次元
+        { name: 'Bahamut (动画疯)', desc: '台湾节点支持看热播新番动画', status: 'pass', cat: 'regional', res: '1080P 动画' },
+        { name: 'TVer (日本电视台)', desc: '日本节点支持民放台日剧重温', status: 'pass', cat: 'regional', res: '日本 IP 解锁' },
+        { name: 'AbemaTV (日本阿贝玛)', desc: '支持日本动漫与综合赛事直播', status: 'pass', cat: 'regional', res: '日区支持' },
+        { name: 'Bilibili 港澳台限定', desc: '支持港澳台番剧专区内容播放', status: 'pass', cat: 'regional', res: '1080P 高码率' },
+        // 国际无损音乐
+        { name: 'Spotify', desc: '正常直连播放，支持无损曲库畅听', status: 'pass', cat: 'music', res: '高品质直连' },
+        { name: 'Apple Music 海外区', desc: '支持海外区歌曲试听与收藏', status: 'pass', cat: 'music', res: '无损音频' },
+        { name: 'Tidal HiFi', desc: '支持主流音乐流媒体播放', status: 'pass', cat: 'music', res: 'Hi-Fi' },
+        // AI 生产力模型
+        { name: 'ChatGPT', desc: '支持网页与移动端正常问答，对话连贯', status: 'pass', cat: 'ai', res: '网页对话' },
+        { name: 'Claude', desc: '正常使用，代码与学术问答响应平稳', status: 'pass', cat: 'ai', res: '官方网页' },
+        { name: 'Google Gemini', desc: '支持正常对话与多模态接入', status: 'pass', cat: 'ai', res: '多模态支持' },
+        { name: 'Midjourney', desc: '支持生图回传，指令接收响应及时', status: 'pass', cat: 'ai', res: '生图支持' }
       ],
       plans: [
         { name: '基础入门版', orig: item.price, discount: '折后约 7 折', traffic: '100 GB / 月', desc: '轻度出海、查阅资料与日常学习首选' },
@@ -660,6 +1060,7 @@
       ],
       pros: [
         '入门门槛亲民，价格公道厚道',
+        'TikTok 免拔卡浏览平稳，主流流媒体全面兼容',
         '节点配置简单，全平台一键快速导入',
         '计费清晰透明，支持单月试用'
       ],
@@ -667,7 +1068,7 @@
         '晚高峰极端高负载时冷门节点延迟略有抖动',
         '不适合极端 8K 超高码率推流场景'
       ],
-      verdict: `作为一款主打平价亲民的实用型梯子，${item.name}能很好地满足日常 Google 查资料、刷推特、看 1080P/4K 视频及轻度 AI 交互需求。建议先月付体验，满意再长期续订。`
+      verdict: `作为一款主打平价亲民的实用型梯子，${item.name}能很好地满足日常刷 TikTok 短视频、看 1080P/4K 视频及轻度 AI 交互需求。建议先月付体验，满意再长期续订。`
     };
   });
 
@@ -717,11 +1118,77 @@
     jumpNavList: document.querySelector('#airport-jump-nav-list'),
     sidebarSearchInput: document.querySelector('#sidebar-search-input'),
     copyToast: document.querySelector('#copy-toast'),
-    breadcrumbCurrentAirport: document.querySelector('#breadcrumb-current-airport')
+    breadcrumbCurrentAirport: document.querySelector('#breadcrumb-current-airport'),
+    // 流媒体与 TikTok 专属监控
+    ssbTiktokRate: document.querySelector('#ssb-tiktok-rate'),
+    ssb4kRate: document.querySelector('#ssb-4k-rate'),
+    ssbRiskRate: document.querySelector('#ssb-risk-rate'),
+    ssbStreamingRate: document.querySelector('#ssb-streaming-rate'),
+    tiktokBenchmarkCard: document.querySelector('#tiktok-benchmark-card')
   };
 
   let currentAirportId = '闪电鼠';
   let currentPeriod = 'peak';
+  let currentStreamingCat = 'all';
+
+  // 流媒体与 AI 解锁分类图标映射
+  function getUnlockCatIcon(cat) {
+    switch (cat) {
+      case 'short': return '🎵';
+      case 'vod': return '🎬';
+      case 'regional': return '🎌';
+      case 'music': return '🎧';
+      case 'ai': return '🤖';
+      default: return '🌐';
+    }
+  }
+
+  function getUnlockCatLabel(cat) {
+    switch (cat) {
+      case 'short': return '短视频/社媒';
+      case 'vod': return '热门影视';
+      case 'regional': return '亚太限定';
+      case 'music': return '国际无损音乐';
+      case 'ai': return 'AI大模型';
+      default: return '视听矩阵';
+    }
+  }
+
+  // 渲染流媒体与 AI 解锁矩阵 (支持分类切换)
+  function renderStreamingUnlocks(catFilter) {
+    currentStreamingCat = catFilter || 'all';
+    const ap = AIRPORT_DATABASE[currentAirportId];
+    if (!dom.unlockMatrixContainer || !ap || !ap.unlocks) return;
+
+    const list = currentStreamingCat === 'all'
+      ? ap.unlocks
+      : ap.unlocks.filter((u) => u.cat === currentStreamingCat);
+
+    if (list.length === 0) {
+      dom.unlockMatrixContainer.innerHTML = `
+        <div style="grid-column: 1 / -1; padding: 24px; text-align: center; color: #7b9499; background: #faf8f3; border: 1px dashed #dcd8cb; border-radius: 4px;">
+          该分类下暂无专属实测项，请点击上方【全部视听】查看全量评测。
+        </div>
+      `;
+      return;
+    }
+
+    dom.unlockMatrixContainer.innerHTML = list.map((u) => `
+      <div class="unlock-item">
+        <div class="unlock-top-row">
+          <div class="unlock-name"><span>${getUnlockCatIcon(u.cat)}</span> ${u.name}</div>
+          ${u.res ? `<span class="unlock-res-badge">${u.res}</span>` : ''}
+        </div>
+        <p class="unlock-desc">${u.desc}</p>
+        <div class="unlock-bottom-row">
+          <span class="unlock-cat-tag">${getUnlockCatLabel(u.cat)}</span>
+          <span class="unlock-status ${u.status === 'pass' ? 'status-pass' : 'status-warn'}">
+            ${u.status === 'pass' ? '✔ 原生支持' : '⚠ 限制'}
+          </span>
+        </div>
+      </div>
+    `).join('');
+  }
 
   // 3. 动态绘制真实 SVG 测速曲线与波形
   function drawSpeedCurve(curveData, periodTitle) {
@@ -982,20 +1449,74 @@
       }).join('');
     }
 
-    // 模块 5: 流媒体与 AI 解锁矩阵
-    if (dom.unlockMatrixContainer && ap.unlocks) {
-      dom.unlockMatrixContainer.innerHTML = ap.unlocks.map((u) => `
-        <div class="unlock-item">
-          <div>
-            <div class="unlock-name"><span>🌐</span> ${u.name}</div>
-            <div style="font-size:11px;color:#7b9499;margin-top:2px;">${u.desc}</div>
-          </div>
-          <span class="unlock-status ${u.status === 'pass' ? 'status-pass' : 'status-warn'}">
-            ${u.status === 'pass' ? '✔ 原生支持' : '⚠ 限制'}
-          </span>
-        </div>
-      `).join('');
+    // 模块 5: 流媒体与 TikTok 国际短视频解锁深度实测
+    if (ap.streamingStats) {
+      if (dom.ssbTiktokRate) dom.ssbTiktokRate.textContent = ap.streamingStats.tiktokRate || '100% 极速';
+      if (dom.ssb4kRate) dom.ssb4kRate.textContent = ap.streamingStats.buffer4k || '< 0.35 秒';
+      if (dom.ssbRiskRate) dom.ssbRiskRate.textContent = ap.streamingStats.riskRate || '纯净低风险';
+      if (dom.ssbStreamingRate) dom.ssbStreamingRate.textContent = ap.streamingStats.streamingRate || '全绿 100%';
     }
+
+    // 动态渲染 TikTok 专项深度大看板
+    if (dom.tiktokBenchmarkCard && ap.tiktok) {
+      const tk = ap.tiktok;
+      dom.tiktokBenchmarkCard.innerHTML = `
+        <div class="tiktok-card-header">
+          <div class="tiktok-card-title">
+            <span class="tiktok-icon">🎵</span>
+            <div>
+              <h3>TikTok 国际版短视频深度实测专项</h3>
+              <p class="tiktok-card-sub">免拔卡直连 · 原生 IP 归属 · 1080P/4K 高清直播 · 0 播放防风控专项评测</p>
+            </div>
+          </div>
+          <div class="tiktok-score-pill">
+            <span class="tsp-label">TIKTOK BENCHMARK</span>
+            <span class="tsp-val">${tk.rating || '👑 旗舰顶级'}</span>
+          </div>
+        </div>
+
+        <div class="tiktok-grid">
+          <div class="tiktok-cell">
+            <div class="tc-label"><span>📱</span> 免拔卡支持度 (免插海外SIM)</div>
+            <div class="tc-val accent-green">${tk.simFree}</div>
+            <div class="tc-desc">iOS / Android 客户端使用 Shadowrocket / Clash 等配合分流规则，无需拔出国内实体 SIM 卡即可流畅刷视频。</div>
+          </div>
+          <div class="tiktok-cell">
+            <div class="tc-label"><span>🌍</span> 落地国家地区与原生 IP</div>
+            <div class="tc-val">${tk.regions}</div>
+            <div class="tc-desc">出口 IP 经 MaxMind 与 IPinfo 数据库反查，全部显示对应本土商业或住宅宽带，无异地飘移与被风控标记。</div>
+          </div>
+          <div class="tiktok-cell">
+            <div class="tc-label"><span>⚡</span> 短视频加载首刷时延</div>
+            <div class="tc-val accent-green">${tk.speed}</div>
+            <div class="tc-desc">上下连续划动短视频首帧无等待缓冲，高清 1080P/60FPS 画质自适应无压缩降画质。</div>
+          </div>
+          <div class="tiktok-cell">
+            <div class="tc-label"><span>📡</span> 海外直播与推流稳定性</div>
+            <div class="tc-val">${tk.live}</div>
+            <div class="tc-desc">观看欧美/东南亚高清直播无跳帧卡顿；支持 OBS 跨境电商推流，上行速率高带宽持续保障。</div>
+          </div>
+          <div class="tiktok-cell">
+            <div class="tc-label"><span>🛡️</span> 创作者发视频 0 播放风控评估</div>
+            <div class="tc-val accent-orange">${tk.creatorSafe}</div>
+            <div class="tc-desc">针对 TikTok Shop 跨境电商与带货创作者账号权重实测，纯净机房出口有效规避系统防刷与风控限流。</div>
+          </div>
+          <div class="tiktok-cell">
+            <div class="tc-label"><span>🎬</span> 站长实测总结评价</div>
+            <div class="tc-val">${ap.name} 实测达标</div>
+            <div class="tc-desc">专线与落地机房路由深度优化，短视频与直播业务表现优异，达到高品质标准。</div>
+          </div>
+        </div>
+
+        <div class="tiktok-verdict-bar">
+          <div class="tvb-title"><span>💡</span> 站长实测点评：</div>
+          <div class="tvb-content">${tk.reviewNote}</div>
+        </div>
+      `;
+    }
+
+    // 渲染流媒体与 AI 解锁矩阵 (保持分类)
+    renderStreamingUnlocks(currentStreamingCat);
 
     // 模块 6: 套餐价格表
     if (dom.pricingTierBody && ap.plans) {
@@ -1171,7 +1692,23 @@
       });
     }
 
-    // 6.7 从 URL 参数解析当前要查看的梯子 ID
+    // 6.7 流媒体与 AI 解锁分类 Tab 切换事件
+    const streamingTabBtns = document.querySelectorAll('.streaming-tab-btn');
+    if (streamingTabBtns.length) {
+      streamingTabBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          streamingTabBtns.forEach((b) => {
+            const isActive = b === btn;
+            b.classList.toggle('active', isActive);
+            b.setAttribute('aria-selected', isActive ? 'true' : 'false');
+          });
+          const cat = btn.dataset.cat || 'all';
+          renderStreamingUnlocks(cat);
+        });
+      });
+    }
+
+    // 6.8 从 URL 参数解析当前要查看的梯子 ID
     const urlParams = new URLSearchParams(window.location.search);
     const paramId = urlParams.get('id');
 

@@ -16,7 +16,7 @@
           <strong style="color:#0284c7;display:block;margin-bottom:6px;">✈️ 官方 Telegram 交流与防失联社群：</strong>
           <span style="font-size:13px;color:#334155;">欢迎加入官方 TG 交流群，获取实时晚高峰测速、独家折扣券首发与跑路预警互助：</span>
           <div style="margin-top:10px;display:flex;gap:10px;flex-wrap:wrap;">
-            <a href="https://t.me/shandianshuvpn" target="_blank" rel="noopener noreferrer" style="display:inline-block;background:#0284c7;color:#fff;font-weight:700;font-size:12.5px;padding:7px 14px;border-radius:6px;text-decoration:none;">
+            <a href="https://t.me/shandianjiaoliu" target="_blank" rel="noopener noreferrer" style="display:inline-block;background:#0284c7;color:#fff;font-weight:700;font-size:12.5px;padding:7px 14px;border-radius:6px;text-decoration:none;">
               👉 点击加入 Telegram 官方交流群 ↗
             </a>
             <a href="about.html" style="display:inline-block;background:#ffffff;border:1px solid #0284c7;color:#0284c7;font-weight:700;font-size:12.5px;padding:7px 14px;border-radius:6px;text-decoration:none;">

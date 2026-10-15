@@ -516,35 +516,347 @@
   font: 700 11px 'DM Mono', monospace;
 }
 
-/* 模块 3: 流媒体 & AI 解锁矩阵 */
-.unlock-matrix-grid {
+/* ============================================================
+   模块 5: 流媒体与 TikTok 国际短视频解锁深度测评增强样式
+   ============================================================ */
+
+/* 1. 流媒体与 TikTok SLA 性能横幅 */
+.streaming-summary-banner {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  background: #faf8f3;
+  border: 1px solid #e5e3d7;
+  padding: 14px 18px;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
+.ssb-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.ssb-label {
+  font: 700 11px 'DM Mono', monospace;
+  color: #7b9499;
+  letter-spacing: 0.3px;
+}
+
+.ssb-val {
+  font: 800 20px 'DM Mono', monospace;
+  color: #1b3238;
+}
+
+.ssb-val.accent-green {
+  color: #156b38;
+}
+
+.ssb-val.accent-orange {
+  color: #b85210;
+}
+
+.ssb-desc {
+  font: 500 11.5px 'Manrope', sans-serif;
+  color: #566e74;
+}
+
+/* 2. TikTok 国际版短视频专项深度测评核心大看板 */
+.tiktok-benchmark-card {
+  background: #0d171e;
+  border: 1px solid #1e333d;
+  border-top: 3px solid #00f2fe;
+  border-radius: 4px;
+  padding: 22px 24px;
+  margin-bottom: 24px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.tiktok-benchmark-card::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, rgba(254, 44, 85, 0.12), transparent 70%);
+  pointer-events: none;
+}
+
+.tiktok-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 16px;
+}
+
+.tiktok-card-title {
+  display: flex;
+  align-items: center;
   gap: 14px;
 }
 
-.unlock-item {
-  display: flex;
+.tiktok-icon {
+  font-size: 28px;
+  display: inline-flex;
   align-items: center;
-  justify-content: space-between;
-  background: #faf8f3;
-  border: 1px solid #e5e3d7;
-  padding: 12px 16px;
-  border-radius: 2px;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  filter: drop-shadow(0 0 12px rgba(0, 242, 254, 0.35));
 }
 
-.unlock-name {
+.tiktok-card-title h3 {
+  font: 800 18px 'Manrope', sans-serif;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: -0.2px;
+}
+
+.tiktok-card-sub {
+  font: 500 12px 'Manrope', sans-serif;
+  color: #8ea4aa;
+  margin: 4px 0 0;
+  line-height: 1.4;
+}
+
+.tiktok-score-pill {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(240, 154, 84, 0.35);
+  padding: 6px 14px;
+  border-radius: 4px;
+}
+
+.tsp-label {
+  font: 700 10.5px 'DM Mono', monospace;
+  color: #f09a54;
+  letter-spacing: 0.5px;
+}
+
+.tsp-val {
+  font: 800 13px 'Manrope', sans-serif;
+  color: #9de9e0;
+  margin-top: 2px;
+}
+
+/* TikTok 6格核心参数网格 */
+.tiktok-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.tiktok-cell {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  padding: 13px 15px;
+  border-radius: 3px;
+  transition: all 0.2s ease;
+}
+
+.tiktok-cell:hover {
+  border-color: rgba(157, 233, 224, 0.35);
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-1px);
+}
+
+.tc-label {
+  font: 700 11px 'DM Mono', monospace;
+  color: #8ea4aa;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tc-val {
   font: 700 13px 'Manrope', sans-serif;
+  color: #ffffff;
+  margin: 6px 0 3px;
+  line-height: 1.35;
+}
+
+.tc-val.accent-green {
+  color: #9de9e0;
+}
+
+.tc-val.accent-orange {
+  color: #f4d17b;
+}
+
+.tc-desc {
+  font: 500 11px 'Manrope', sans-serif;
+  color: #6b848a;
+  line-height: 1.45;
+}
+
+/* TikTok 站长实测结论条 */
+.tiktok-verdict-bar {
+  background: linear-gradient(135deg, rgba(240, 154, 84, 0.12), rgba(0, 242, 254, 0.06));
+  border: 1px solid rgba(240, 154, 84, 0.25);
+  border-radius: 4px;
+  padding: 12px 18px;
+  margin-top: 16px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.tvb-title {
+  font: 800 12px 'Manrope', sans-serif;
+  color: #f09a54;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.tvb-content {
+  font: 500 12.5px/1.65 'Manrope', 'Noto Serif SC', serif;
+  color: #d4e4e6;
+}
+
+/* 3. 全平台流媒体分类与解锁矩阵 */
+.streaming-category-wrapper {
+  margin-top: 24px;
+}
+
+.streaming-section-intro h3 {
+  font: 800 15px 'Manrope', sans-serif;
   color: #1b3238;
+  margin: 0 0 6px;
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
+.streaming-section-intro p {
+  font: 500 12.5px/1.6 'Manrope', sans-serif;
+  color: #566e74;
+  margin: 0 0 14px;
+}
+
+.streaming-tabs-bar {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+  scrollbar-width: thin;
+}
+
+.streaming-tab-btn {
+  background: #faf8f3;
+  border: 1px solid #d8d4c7;
+  padding: 7px 14px;
+  border-radius: 20px;
+  font: 700 11.5px 'Manrope', sans-serif;
+  color: #3b5055;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.streaming-tab-btn:hover {
+  background: #f0ede4;
+  border-color: #b8b2a3;
+  color: #1b3238;
+}
+
+.streaming-tab-btn.active {
+  background: #1b3238;
+  color: #9de9e0;
+  border-color: #1b3238;
+}
+
+/* 解锁矩阵网格与卡片 */
+.unlock-matrix-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.unlock-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #faf8f3;
+  border: 1px solid #e5e3d7;
+  padding: 13px 15px;
+  border-radius: 3px;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.unlock-item:hover {
+  border-color: #f09a54;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px);
+}
+
+.unlock-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.unlock-name {
+  font: 800 13px 'Manrope', sans-serif;
+  color: #1b3238;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.unlock-res-badge {
+  font: 700 10px 'DM Mono', monospace;
+  padding: 2px 6px;
+  border-radius: 2px;
+  background: rgba(240, 154, 84, 0.12);
+  color: #b85210;
+  border: 1px solid rgba(240, 154, 84, 0.25);
+  white-space: nowrap;
+}
+
+.unlock-desc {
+  font: 500 11.5px/1.45 'Manrope', sans-serif;
+  color: #566e74;
+  margin: 0;
+}
+
+.unlock-bottom-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4px;
+}
+
+.unlock-cat-tag {
+  font: 600 10.5px 'DM Mono', monospace;
+  color: #8ea4aa;
+}
+
 .unlock-status {
-  font: 700 11.5px 'DM Mono', monospace;
+  font: 700 11px 'DM Mono', monospace;
   padding: 3px 8px;
   border-radius: 2px;
+  white-space: nowrap;
 }
 
 .unlock-status.status-pass {
@@ -557,6 +869,52 @@
   background: rgba(240, 154, 84, 0.15);
   color: #b85210;
   border: 1px solid rgba(240, 154, 84, 0.35);
+}
+
+/* 4. 流媒体与 TikTok 避坑实操指南盒子 */
+.streaming-tips-box {
+  background: #f4f9f8;
+  border: 1px solid #bce1db;
+  border-left: 4px solid #1fa38d;
+  border-radius: 3px;
+  padding: 16px 20px;
+  margin-top: 24px;
+}
+
+.tips-box-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.tips-box-icon {
+  font-size: 16px;
+}
+
+.tips-box-header h4 {
+  font: 800 14px 'Manrope', sans-serif;
+  color: #114d43;
+  margin: 0;
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.tip-col strong {
+  font: 700 12px 'Manrope', sans-serif;
+  color: #1b3238;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.tip-col p {
+  font: 500 11.5px/1.6 'Manrope', 'Noto Serif SC', serif;
+  color: #40595d;
+  margin: 0;
 }
 
 /* 模块 4: 套餐价格阶梯表 */
@@ -1403,6 +1761,21 @@
   line-height: 1;
 }
 
+@media (max-width: 860px) {
+  .streaming-summary-banner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .tiktok-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .unlock-matrix-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .tips-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 640px) {
   .ops-sla-banner {
     grid-template-columns: repeat(2, 1fr);
@@ -1410,5 +1783,53 @@
   .arch-tech-grid {
     grid-template-columns: 1fr;
   }
+  .streaming-summary-banner {
+    grid-template-columns: 1fr;
+  }
+  .tiktok-grid {
+    grid-template-columns: 1fr;
+  }
+  .unlock-matrix-grid {
+    grid-template-columns: 1fr;
+  }
+  .tiktok-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .tiktok-score-pill {
+    align-items: flex-start;
+    width: 100%;
+  }
+  .tiktok-verdict-bar {
+    flex-direction: column;
+    gap: 6px;
+  }
 }
+
+@media (max-width: 768px) {
+  .review-top-nav {
+    padding: 10px 16px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .review-nav-left {
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .review-nav-right {
+    width: 100%;
+    justify-content: space-between;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .review-airport-selector {
+    flex-grow: 1;
+    justify-content: flex-end;
+  }
+  .review-airport-selector select {
+    max-width: 170px;
+  }
+}
+
 
